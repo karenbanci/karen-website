@@ -68,18 +68,24 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
       variants={fadeIn}
       whileHover={{ y: -10, transition: { duration: 0.2 } }}
     >
-      <div className="relative h-48 overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-        />
-        <div className="absolute top-0 right-0 p-3">
-          <div className="w-8 h-8 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full">
-            <span className="text-xs font-semibold">#{index + 1}</span>
+      <Link
+          to={`/project/${project.id}`}
+          className="inline-block text-sm font-medium text-pink-500 hover:text-pink-400 transition-colors"
+        >
+        <div className="relative h-48 overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute top-0 right-0 p-3">
+            <div className="w-8 h-8 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full">
+              <span className="text-xs font-semibold">#{index + 1}</span>
+            </div>
           </div>
         </div>
-      </div>
+
+        </Link>
 
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
