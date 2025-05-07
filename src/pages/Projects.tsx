@@ -70,7 +70,7 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
     >
       <Link
           to={`/project/${project.id}`}
-          className="inline-block text-sm font-medium text-pink-500 hover:text-pink-400 transition-colors"
+          className="inline-block text-sm font-medium text-pink-500 hover:text-pink-400 transition-colors w-full"
         >
         <div className="relative h-48 overflow-hidden">
           <img
