@@ -15,7 +15,7 @@ interface BackgroundProps {
 export default function Background({
   count = 5000,
   size = 0.015,
-  radius = 5,
+  radius = 4,
   colors = ['#7928CA', '#FF0080'],
   speed = 0.2,
 }: BackgroundProps) {
