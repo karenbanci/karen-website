@@ -22,7 +22,7 @@ const projects = [
     duration: "1 month",
     role: "Frontend Developer",
     year: "2023",
-    link: "http://karenhb.com/periodic_table_deploy/"
+    link: "https://karenbanci.github.io/periodic_table_development/"
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const projects = [
     duration: "3 days",
     role: "Frontend Developer & 3D Specialist",
     year: "2024",
-    link: "https://karenhb.com/game-react-three-fiber/"
+    link: "https://karenbanci.github.io/game-react-three-fiber/"
   },
   {
     id: 3,
