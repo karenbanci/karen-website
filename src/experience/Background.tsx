@@ -15,12 +15,12 @@ interface BackgroundProps {
 export default function Background({
   count = 5000,
   size = 0.015,
-  radius = 3.5,
+  radius = 5,
   colors = ['#7928CA', '#FF0080'],
   speed = 0.2,
 }: BackgroundProps) {
   const points = useRef<THREE.Points>(null);
-  
+
   // Generate random points in a sphere
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(count * 3);
@@ -33,14 +33,14 @@ export default function Background({
     const colorArray = new Float32Array(count * 3);
     const color1 = new THREE.Color(colors[0]);
     const color2 = new THREE.Color(colors[1]);
-    
+
     for (let i = 0; i < count; i++) {
       const mixedColor = color1.clone().lerp(color2, Math.random());
       colorArray[i * 3] = mixedColor.r;
       colorArray[i * 3 + 1] = mixedColor.g;
       colorArray[i * 3 + 2] = mixedColor.b;
     }
-    
+
     return colorArray;
   }, [count, colors]);
 
@@ -64,4 +64,4 @@ export default function Background({
       />
     </Points>
   );
-} 
+}

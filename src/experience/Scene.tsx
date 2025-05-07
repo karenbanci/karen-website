@@ -68,18 +68,7 @@ export function SceneProvider({ children }: SceneProps) {
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <Background />
         {/* Render all shapes inside the Canvas */}
-        {shapes.map(shape => (
-          <GeometricShape
-            key={shape.id}
-            position={shape.position}
-            shape={shape.shape}
-            color={shape.color}
-            size={shape.size}
-            floatIntensity={shape.floatIntensity}
-            wobbleSpeed={shape.wobbleSpeed}
-            wobbleStrength={shape.wobbleStrength}
-          />
-        ))}
+
       </Canvas>
       {children}
     </SceneContext.Provider>
@@ -93,4 +82,4 @@ export default function Scene({ children }: SceneProps) {
       {children}
     </SceneProvider>
   );
-} 
+}
