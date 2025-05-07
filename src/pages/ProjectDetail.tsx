@@ -7,41 +7,40 @@ import { useScene } from '../experience/Scene';
 const projects = [
   {
     id: 1,
-    title: "Interactive 3D Web Experience",
-    description: "An immersive WebGL-based storytelling platform with dynamic animations and user interactions.",
-    fullDescription: "This project pushed the boundaries of web-based storytelling by combining narrative elements with interactive 3D visualizations. Users navigate through a series of interconnected scenes, each revealing parts of a story through both visual and interactive elements. Built with Three.js and React, it features custom shaders, post-processing effects, and optimized asset loading for smooth performance across devices.",
-    tags: ["Three.js", "WebGL", "React"],
-    image: "https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
+    title: "Immersive Periodic Table 3D",
+    description: "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
+    fullDescription: "This project involved creating a fully interactive 3D periodic table using React and Three.js. The table allows users to explore the properties of each element in a visually engaging way. The project was designed to be part of my portfolio and improve my skills in web development.",
+    tags: ["Three.js", "WebGL", "React", "Blender"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project.png",
     additionalImages: [
-      "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8M2QlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
-      "https://images.unsplash.com/photo-1633250411108-3b4fd16df31c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fDNkJTIwZGVzaWdufGVufDB8fDB8fHww"
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project2.png",
+
     ],
     shape: "sphere",
     color: "#FF0080",
-    client: "Media Entertainment Corp",
-    duration: "3 months",
-    role: "Lead Developer",
+    client: "Self Project",
+    duration: "1 month",
+    role: "Frontend Developer",
     year: "2023",
-    link: "https://example.com/project1"
+    link: "http://karenhb.com/periodic_table_deploy/"
   },
   {
     id: 2,
-    title: "E-Commerce Platform Redesign",
-    description: "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
-    fullDescription: "This project involved reimagining the online shopping experience for a major retail brand. The redesign focused on incorporating 3D product visualization technology, allowing customers to view products from all angles and even place them in their own space using AR. The new interface streamlined the purchasing process while adding immersive features that significantly increased conversion rates and customer engagement.",
-    tags: ["React", "Framer Motion", "Three.js"],
-    image: "https://images.unsplash.com/photo-1626544827763-d516dce335e2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fDNkJTIwZGVzaWdufGVufDB8fDB8fHww",
+    title: "Marble Race - Game React Three FIber",
+    description: "Bruno Simon's course project, a marble race game built with React Three Fiber.",
+    fullDescription: "This project is a part of learning course of Bruno Simon. The project was built using React Three Fiber, a React renderer for Three.js, allowing for a seamless integration of 3D graphics into the React ecosystem. It works just only desktop version. The game features a marble racing through a 3D course, with various obstacles and challenges. ",
+    tags: ["React", "React Three Fiber", "Three.js", "Vite"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
     additionalImages: [
-      "https://images.unsplash.com/photo-1543512214-318c7553f230?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2R1Y3QlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
-      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2R1Y3QlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D"
+      ""
     ],
     shape: "box",
     color: "#7928CA",
-    client: "RetailX Inc.",
-    duration: "6 months",
+    client: "Self Project",
+    duration: "3 days",
     role: "Frontend Developer & 3D Specialist",
-    year: "2022",
-    link: "https://example.com/project2"
+    year: "2024",
+    link: "https://karenhb.com/game-react-three-fiber/"
   },
   {
     id: 3,
@@ -142,8 +141,8 @@ export default function ProjectDetail() {
       <div className="min-h-screen flex flex-col items-center justify-center px-4">
         <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
         <p className="text-gray-300 mb-8">The project you're looking for doesn't exist.</p>
-        <Link 
-          to="/projects" 
+        <Link
+          to="/projects"
           className="px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white"
         >
           Back to Projects
@@ -159,67 +158,67 @@ export default function ProjectDetail() {
     <div className="min-h-screen py-20 px-4 md:px-8">
       {/* Main content */}
       <div className="container mx-auto max-w-6xl">
-        <Link 
-          to="/projects" 
+        <Link
+          to="/projects"
           className="inline-flex items-center text-gray-300 hover:text-white mb-8 transition-colors"
         >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            className="h-5 w-5 mr-2" 
-            viewBox="0 0 20 20" 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 mr-2"
+            viewBox="0 0 20 20"
             fill="currentColor"
           >
-            <path 
-              fillRule="evenodd" 
-              d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" 
-              clipRule="evenodd" 
+            <path
+              fillRule="evenodd"
+              d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
+              clipRule="evenodd"
             />
           </svg>
           Back to Projects
         </Link>
-        
+
         <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-5xl font-bold mb-4"
             variants={fadeIn}
           >
             {project.title}
           </motion.h1>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-wrap gap-2 mb-8"
             variants={fadeIn}
           >
             {project.tags.map((tag: string, index: number) => (
-              <span 
-                key={index} 
+              <span
+                key={index}
                 className="text-sm px-3 py-1 rounded-full bg-gray-800 text-gray-300"
               >
                 {tag}
               </span>
             ))}
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={fadeIn}
           >
             <div className="md:col-span-2">
               <div className="relative rounded-xl overflow-hidden aspect-video mb-4">
-                <img 
-                  src={allImages[currentImageIndex]} 
+                <img
+                  src={allImages[currentImageIndex]}
                   alt={`${project.title} - Image ${currentImageIndex + 1}`}
                   className="w-full h-full object-cover"
                 />
-                
+
                 {allImages.length > 1 && (
                   <>
-                    <button 
-                      onClick={() => setCurrentImageIndex(prev => (prev === 0 ? allImages.length - 1 : prev - 1))} 
+                    <button
+                      onClick={() => setCurrentImageIndex(prev => (prev === 0 ? allImages.length - 1 : prev - 1))}
                       className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center hover:bg-black/70 transition-colors"
                       aria-label="Previous image"
                     >
@@ -227,8 +226,8 @@ export default function ProjectDetail() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                       </svg>
                     </button>
-                    <button 
-                      onClick={() => setCurrentImageIndex(prev => (prev === allImages.length - 1 ? 0 : prev + 1))} 
+                    <button
+                      onClick={() => setCurrentImageIndex(prev => (prev === allImages.length - 1 ? 0 : prev + 1))}
                       className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center hover:bg-black/70 transition-colors"
                       aria-label="Next image"
                     >
@@ -239,17 +238,17 @@ export default function ProjectDetail() {
                   </>
                 )}
               </div>
-              
+
               {allImages.length > 1 && (
                 <div className="flex space-x-2 overflow-x-auto py-2">
                   {allImages.map((img: string, idx: number) => (
-                    <button 
+                    <button
                       key={idx}
                       onClick={() => setCurrentImageIndex(idx)}
                       className={`w-20 h-16 rounded overflow-hidden flex-shrink-0 ${currentImageIndex === idx ? 'ring-2 ring-pink-500' : 'opacity-70 hover:opacity-100'}`}
                     >
-                      <img 
-                        src={img} 
+                      <img
+                        src={img}
                         alt={`Thumbnail ${idx + 1}`}
                         className="w-full h-full object-cover"
                       />
@@ -258,37 +257,37 @@ export default function ProjectDetail() {
                 </div>
               )}
             </div>
-            
+
             <div className="backdrop-blur-sm bg-gray-900/30 p-6 rounded-xl">
               <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-700">Project Details</h3>
-              
+
               <div className="space-y-4">
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Client</p>
                   <p>{project.client}</p>
                 </div>
-                
+
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Year</p>
                   <p>{project.year}</p>
                 </div>
-                
+
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Duration</p>
                   <p>{project.duration}</p>
                 </div>
-                
+
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Role</p>
                   <p>{project.role}</p>
                 </div>
-                
+
                 {project.link && (
                   <div>
                     <p className="text-gray-400 text-sm mb-1">Live Preview</p>
-                    <a 
-                      href={project.link} 
-                      target="_blank" 
+                    <a
+                      href={project.link}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-pink-500 hover:text-pink-400 flex items-center"
                     >
@@ -302,49 +301,49 @@ export default function ProjectDetail() {
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div variants={fadeIn} className="mb-16">
             <h2 className="text-2xl font-bold mb-6">About this project</h2>
             <div className="text-gray-300 space-y-4">
               <p>{project.fullDescription}</p>
             </div>
           </motion.div>
-          
+
           <motion.div variants={fadeIn} className="flex justify-between items-center">
-            <Link 
-              to={`/project/${project.id > 1 ? project.id - 1 : projects.length}`} 
+            <Link
+              to={`/project/${project.id > 1 ? project.id - 1 : projects.length}`}
               className="px-6 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors flex items-center"
             >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-5 w-5 mr-2" 
-                viewBox="0 0 20 20" 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 mr-2"
+                viewBox="0 0 20 20"
                 fill="currentColor"
               >
-                <path 
-                  fillRule="evenodd" 
-                  d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" 
-                  clipRule="evenodd" 
+                <path
+                  fillRule="evenodd"
+                  d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
+                  clipRule="evenodd"
                 />
               </svg>
               Previous Project
             </Link>
-            
-            <Link 
-              to={`/project/${project.id < projects.length ? project.id + 1 : 1}`} 
+
+            <Link
+              to={`/project/${project.id < projects.length ? project.id + 1 : 1}`}
               className="px-6 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors flex items-center"
             >
               Next Project
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-5 w-5 ml-2" 
-                viewBox="0 0 20 20" 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 ml-2"
+                viewBox="0 0 20 20"
                 fill="currentColor"
               >
-                <path 
-                  fillRule="evenodd" 
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" 
-                  clipRule="evenodd" 
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
                 />
               </svg>
             </Link>
@@ -353,4 +352,4 @@ export default function ProjectDetail() {
       </div>
     </div>
   );
-} 
+}

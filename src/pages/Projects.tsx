@@ -2,25 +2,25 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useScene } from '../experience/Scene';
-import GeometricShape from '../experience/GeometricShape';
+// import GeometricShape from '../experience/GeometricShape';
 
 // Sample project data
 const projects = [
   {
     id: 1,
-    title: "Interactive 3D Web Experience",
-    description: "An immersive WebGL-based storytelling platform with dynamic animations and user interactions.",
-    tags: ["Three.js", "WebGL", "React"],
-    image: "https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
+    title: "Periodic Table 3D",
+    description: "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
+    tags: ["Three.js", "WebGL", "React", "Blender"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project.png",
     shape: "sphere",
     color: "#FF0080"
   },
   {
     id: 2,
-    title: "E-Commerce Platform Redesign",
+    title: "Marble Race - Game React Three FIber",
     description: "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
-    tags: ["React", "Framer Motion", "Three.js"],
-    image: "https://images.unsplash.com/photo-1626544827763-d516dce335e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fDNkJTIwZGVzaWdufGVufDB8fDB8fHww",
+    tags: ["React", "React Three Fiber", "Three.js", "Vite"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
     shape: "box",
     color: "#7928CA"
   },
@@ -61,15 +61,16 @@ const staggerContainer = {
 };
 
 const ProjectCard = ({ project, index }: { project: any, index: number }) => {
+
   return (
-    <motion.div 
+    <motion.div
       className="bg-gray-900/40 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-pink-500/10 transition-all duration-300"
       variants={fadeIn}
       whileHover={{ y: -10, transition: { duration: 0.2 } }}
     >
       <div className="relative h-48 overflow-hidden">
-        <img 
-          src={project.image} 
+        <img
+          src={project.image}
           alt={project.title}
           className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
         />
@@ -79,23 +80,23 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
           </div>
         </div>
       </div>
-      
+
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
         <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
-        
+
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag: string, i: number) => (
-            <span 
-              key={i} 
+            <span
+              key={i}
               className="text-xs px-2 py-1 rounded-full bg-gray-700/50 text-gray-300"
             >
               {tag}
             </span>
           ))}
         </div>
-        
-        <Link 
+
+        <Link
           to={`/project/${project.id}`}
           className="inline-block text-sm font-medium text-pink-500 hover:text-pink-400 transition-colors"
         >
@@ -112,7 +113,7 @@ export default function Projects() {
   useEffect(() => {
     // Clear any existing shapes first
     clearShapes();
-    
+
     // Add shapes to the scene when the component mounts
     projects.forEach((project, index) => {
       addShape({
@@ -137,22 +138,22 @@ export default function Projects() {
           variants={staggerContainer}
           className="mb-16 text-center"
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-5xl font-bold mb-6"
             variants={fadeIn}
           >
             My Projects
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeIn}
           >
-            Explore my portfolio of creative development work, from interactive 3D 
+            Explore my portfolio of creative development work, from interactive 3D
             experiences to user interface designs.
           </motion.p>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
           animate="visible"
@@ -165,4 +166,4 @@ export default function Projects() {
       </div>
     </div>
   );
-} 
+}
