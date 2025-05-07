@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-            KarenB
+            KarenHB
           </Link>
 
           {/* Desktop Navigation */}
