@@ -7,6 +7,78 @@ import { useScene } from '../experience/Scene';
 const projects = [
   {
     id: 1,
+    title: "Eleva – Life Strategy & Coaching Website",
+    description: "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
+    fullDescription: "Clean, elegant design with strategic use of white space and calming colors to inspire trust and clarity. Clear calls-to-action, including client onboarding and newsletter signup. Hero section with compelling messaging and a strong personal brand image. Structured comparison of “where you are” vs. “where you want to be” to speak directly to user pain points. Responsive layout and optimized performance across devices.",
+    tags: ["Wix"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-home.webp",
+    additionalImages: [
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/about-eleva-2.webp","https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-plans.webp"
+
+    ],
+    client: "Eleva",
+    duration: "5 month",
+    role: "Frontend Developer",
+    year: "2025",
+    link: "http://www.eleva.live"
+  },
+  {
+    id: 2,
+    title: "LETIH BEAUTY – Aesthetic Wellness Brand Website",
+    description: "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body. The goal was to reflect the brand’s philosophy of inner calm, rejuvenation, and personalized care through a sophisticated and user-friendly digital experience.",
+    fullDescription: "Clean, minimalist design with earthy tones and natural imagery to evoke tranquility. Mobile-optimized layout for on-the-go users. Highlight sections for mission, vision, and core values. Visual hierarchy built around photography to establish trust and showcase the spa environment. WhatsApp contact integration for quick communication. ",
+    tags: ["JavaScript", "React", "Contentful", "Airtable"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-home.webp",
+    additionalImages: [
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-about.webp", "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-login.webp", "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-client.webp"
+    ],
+    shape: "box",
+    color: "#7928CA",
+    client: "Letih Beauty",
+    duration: "7 months",
+    role: "Full Stack Developer",
+    year: "2025",
+    link: "https://letihbeauty.com/"
+  },
+  {
+    id: 3,
+    title: "Jairo Honorio – Personal Portfolio",
+    description: "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google. The goal was to showcase his professional journey, leadership roles, and technical expertise in a clean, engaging, and easy-to-navigate format.",
+    fullDescription: "Hero Section: A vibrant, welcoming photo paired with a clear title and CTA. About Me: A brief yet impactful introduction that highlights Jairo’s entrepreneurial and software engineering background. Interactive Timeline: Visually structured career path including roles, volunteer work, and achievements. Contact Section: Encourages direct communication with an inviting message and essential contact links. To create a personal brand website that effectively communicates the impact and experience of a senior tech professional, helping him connect with collaborators, recruiters, and peers.",
+    tags: ["Jekill", "React", "JavaScript", "AMP"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
+    additionalImages: [
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-timeline.webp",
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-contact.webp"
+    ],
+    shape: "torus",
+    color: "#0070F3",
+    client: "Jairo Honorio",
+    duration: "2 months",
+    role: "Full Stack Developer",
+    year: "2022",
+    link: "https://jairo.jahdsoft.com/"
+  },
+  {
+    id: 4,
+    title: "Slap of life (Global Game Jam)",
+    description: "You live your life like any other. Wake up, eat some breakfast, go to work, save the day from government conspiracies. But there is just one thing, you MUST SLAP EVERYTHING!",
+    fullDescription: "This group project, inspired by the Global Game Jam at USV University of Silicon Valley, is centered on Make me laugh. I developed the scenario (houses, trees, and streets) in 3D using Blender and Unreal Engine.",
+    tags: ["Blender", "Unreal Engine", "Game Jam"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
+    additionalImages: [
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-city.webp",
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-car-2.webp","https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-car.webp","https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-unreal.webp"
+    ],
+    shape: "octahedron",
+    color: "#50E3C2",
+    client: "Self Project",
+    duration: "24 hours",
+    role: "3D Developer",
+    year: "2024",
+    link: "https://globalgamejam.org/games/2024/slap-life-6"
+  },  {
+    id: 1,
     title: "Immersive Periodic Table 3D",
     description: "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
     fullDescription: "This project involved creating a fully interactive 3D periodic table using React and Three.js. The table allows users to explore the properties of each element in a visually engaging way. The project was designed to be part of my portfolio and improve my skills in web development.",
@@ -23,8 +95,7 @@ const projects = [
     role: "Frontend Developer",
     year: "2023",
     link: "https://karenbanci.github.io/periodic_table_development/"
-  },
-  {
+  },  {
     id: 2,
     title: "Marble Race - Game React Three FIber",
     description: "Bruno Simon's course project, a marble race game built with React Three Fiber.",
@@ -41,44 +112,6 @@ const projects = [
     role: "Frontend Developer & 3D Specialist",
     year: "2024",
     link: "https://karenbanci.github.io/game-react-three-fiber/"
-  },
-  {
-    id: 3,
-    title: "AR Product Catalog",
-    description: "An augmented reality mobile application for visualizing furniture in real space.",
-    fullDescription: "This AR application revolutionized how customers shop for furniture by allowing them to visualize products in their own homes before purchasing. Using the latest AR technologies, the app features realistic lighting and shadows, accurate scaling, and intuitive placement controls. Users can browse through hundreds of products, customize materials and colors, and see exactly how pieces would look in their space, dramatically reducing return rates and increasing customer satisfaction.",
-    tags: ["React Native", "AR.js", "3D Modeling"],
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXVnbWVudGVkJTIwcmVhbGl0eXxlbnwwfHwwfHx8MA%3D%3D",
-    additionalImages: [
-      "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGF1Z21lbnRlZCUyMHJlYWxpdHl8ZW58MHx8MHx8fDA%3D",
-      "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGF1Z21lbnRlZCUyMHJlYWxpdHl8ZW58MHx8MHx8fDA%3D"
-    ],
-    shape: "torus",
-    color: "#0070F3",
-    client: "HomeStyle Furniture",
-    duration: "4 months",
-    role: "AR Developer",
-    year: "2022",
-    link: "https://example.com/project3"
-  },
-  {
-    id: 4,
-    title: "Interactive Data Visualization",
-    description: "A 3D data visualization dashboard for complex financial datasets with interactive controls.",
-    fullDescription: "This data visualization project transformed complex financial information into intuitive 3D representations that help analysts identify trends and make decisions. The interactive dashboard allows users to manipulate datasets in real-time, viewing information from multiple angles and applying various filters. Custom animations highlight changes over time, while the responsive design ensures the tool works seamlessly across devices, from desktop workstations to tablets used in meetings and presentations.",
-    tags: ["D3.js", "Three.js", "TypeScript"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MHx8MHx8fDA%3D",
-    additionalImages: [
-      "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MHx8MHx8fDA%3D",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGRhdGElMjB2aXN1YWxpemF0aW9ufGVufDB8fDB8fHww"
-    ],
-    shape: "octahedron",
-    color: "#50E3C2",
-    client: "Global Finance Partners",
-    duration: "5 months",
-    role: "Data Visualization Specialist",
-    year: "2021",
-    link: "https://example.com/project4"
   },
 ];
 
