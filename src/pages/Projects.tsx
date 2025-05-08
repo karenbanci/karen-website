@@ -1,47 +1,54 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useScene } from '../experience/Scene';
-// import GeometricShape from '../experience/GeometricShape';
 
 // Sample project data
 const projects = [
   {
     id: 1,
+    title: "Eleva",
+    description: "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
+    tags: ["Wix"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-home.webp",
+
+  },
+  {
+    id: 2,
+    title: "Letih Beauty",
+    description: "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body.",
+    tags: ["JavaScript", "React", "Contentful", "Airtable"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-home.webp",
+
+  },
+  {
+    id: 3,
+    title: "Jairo Honorio",
+    description: "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google.",
+    tags: ["Jekill", "React", "JavaScript", "AMP"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
+
+  },
+  {
+    id: 4,
+    title: "Slap of life (Global Game Jam)",
+    description: "This group project, inspired by the Global Game Jam at USV University of Silicon Valley, is centered on Make me laugh.",
+    tags: ["Blender", "Unreal Engine", "Game Jam"],
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
+
+  },  {
+    id: 1,
     title: "Periodic Table 3D",
     description: "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
     tags: ["Three.js", "WebGL", "React", "Blender"],
     image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project.png",
-    shape: "sphere",
-    color: "#FF0080"
-  },
-  {
+
+  },  {
     id: 2,
     title: "Marble Race - Game React Three FIber",
     description: "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
     image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
-    shape: "box",
-    color: "#7928CA"
-  },
-  {
-    id: 3,
-    title: "AR Product Catalog",
-    description: "An augmented reality mobile application for visualizing furniture in real space.",
-    tags: ["React Native", "AR.js", "3D Modeling"],
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXVnbWVudGVkJTIwcmVhbGl0eXxlbnwwfHwwfHx8MA%3D%3D",
-    shape: "torus",
-    color: "#0070F3"
-  },
-  {
-    id: 4,
-    title: "Interactive Data Visualization",
-    description: "A 3D data visualization dashboard for complex financial datasets with interactive controls.",
-    tags: ["D3.js", "Three.js", "TypeScript"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MHx8MHx8fDA%3D",
-    shape: "octahedron",
-    color: "#50E3C2"
-  },
+
+  }
 ];
 
 const fadeIn = {
@@ -114,25 +121,7 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
 };
 
 export default function Projects() {
-  const { addShape, clearShapes } = useScene();
 
-  useEffect(() => {
-    // Clear any existing shapes first
-    clearShapes();
-
-    // Add shapes to the scene when the component mounts
-    projects.forEach((project, index) => {
-      addShape({
-        position: [3 - (index * 2), 0, -3],
-        shape: project.shape as any,
-        size: 0.5,
-        color: project.color,
-        floatIntensity: 1 + (index * 0.2),
-        wobbleSpeed: 1
-      });
-    });
-
-  }, [addShape, clearShapes]);
 
   return (
     <div className="min-h-screen py-20 px-4 md:px-8">
