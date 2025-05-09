@@ -78,7 +78,7 @@ const projects = [
     year: "2024",
     link: "https://globalgamejam.org/games/2024/slap-life-6"
   },  {
-    id: 1,
+    id: 5,
     title: "Immersive Periodic Table 3D",
     description: "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
     fullDescription: "This project involved creating a fully interactive 3D periodic table using React and Three.js. The table allows users to explore the properties of each element in a visually engaging way. The project was designed to be part of my portfolio and improve my skills in web development.",
@@ -96,14 +96,14 @@ const projects = [
     year: "2023",
     link: "https://karenbanci.github.io/periodic_table_development/"
   },  {
-    id: 2,
+    id: 6,
     title: "Marble Race - Game React Three FIber",
     description: "Bruno Simon's course project, a marble race game built with React Three Fiber.",
     fullDescription: "This project is a part of learning course of Bruno Simon. The project was built using React Three Fiber, a React renderer for Three.js, allowing for a seamless integration of 3D graphics into the React ecosystem. It works just only desktop version. The game features a marble racing through a 3D course, with various obstacles and challenges. ",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
     image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
     additionalImages: [
-      ""
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-finish.png"
     ],
     shape: "box",
     color: "#7928CA",

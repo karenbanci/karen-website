@@ -35,18 +35,18 @@ const projects = [
     image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
 
   },  {
-    id: 1,
+    id: 5,
     title: "Periodic Table 3D",
     description: "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
     tags: ["Three.js", "WebGL", "React", "Blender"],
     image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project.png",
 
   },  {
-    id: 2,
+    id: 6,
     title: "Marble Race - Game React Three FIber",
     description: "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
+    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png"
 
   }
 ];
