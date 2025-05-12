@@ -40,4 +40,4 @@ const CustomRouter: React.FC<CustomRouterProps> = ({ history, children }) => {
   );
 };
 
-export default CustomRouter; 
+export default CustomRouter;
