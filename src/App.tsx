@@ -21,10 +21,10 @@ const LoadingFallback = () => (
 
 // Wrapper component to handle location and provide the scene
 function AppContent() {
-  const location = useLocation();
+  // const location = useLocation();
 
   return (
-    <SceneProvider key={location.pathname}>
+    <SceneProvider>
         <div className="App min-h-screen relative flex flex-col">
           <Navbar />
           <div className="flex-grow">
