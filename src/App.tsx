@@ -1,5 +1,10 @@
 import React, { Suspense } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom';
 import CustomRouter, { history } from './components/CustomRouter';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -50,9 +55,9 @@ function AppContent() {
 function App() {
   return (
     <React.StrictMode>
-      <CustomRouter history={history}>
+      <Router>
         <AppContent />
-      </CustomRouter>
+      </Router>
     </React.StrictMode>
   );
 }
