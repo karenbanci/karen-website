@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useState } from 'react';
-import { Router } from 'react-router-dom';
+import { Router, HashRouter } from 'react-router-dom';
 import { BrowserHistory, createBrowserHistory } from 'history';
 
 // Create a browser history that we can use and modify
@@ -30,13 +30,13 @@ const CustomRouter: React.FC<CustomRouterProps> = ({ history, children }) => {
   }, [history]);
 
   return (
-    <Router
-      navigator={history}
-      location={state.location}
-      navigationType={state.action}
+    <HashRouter
+      // navigator={history}
+      // location={state.location}
+      // navigationType={state.action}
     >
       {children}
-    </Router>
+    </HashRouter>
   );
 };
 
