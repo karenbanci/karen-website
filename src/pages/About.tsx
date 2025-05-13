@@ -166,7 +166,9 @@ export default function About() {
               <p>
                 When I'm not coding, I enjoy exploring AI and staying updated on the latest tech trends. I'm always eager for new challenges and excited about opportunities to create innovative digital.
               </p>
+              <br/>
             </motion.div>
+            <a href='../public/resume/resume.pdf'>Download my Resume</a>
 
             <motion.h2
               className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
