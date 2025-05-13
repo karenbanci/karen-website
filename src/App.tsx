@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, HashRouter, Link } from 'react-router-dom';
 import CustomRouter, { history } from './components/CustomRouter';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -25,34 +25,35 @@ function AppContent() {
 
   return (
     <SceneProvider key={location.pathname}>
-      <div className="App min-h-screen relative flex flex-col">
-        <Navbar />
-        <div className="flex-grow">
-          <Suspense fallback={<LoadingFallback />}>
-            <PageWrapper>
-              <Routes location={location}>
-                <Route path="/" element={<Home />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/project/:id" element={<ProjectDetail />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </PageWrapper>
-          </Suspense>
+        <div className="App min-h-screen relative flex flex-col">
+          <Navbar />
+          <div className="flex-grow">
+            <Suspense fallback={<LoadingFallback />}>
+              <PageWrapper>
+                <Routes location={location}>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/project/:id" element={<ProjectDetail />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </PageWrapper>
+            </Suspense>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </SceneProvider>
+      </SceneProvider>
+
   );
 }
 
 function App() {
   return (
     <React.StrictMode>
-      <CustomRouter history={history}>
+       <HashRouter>
         <AppContent />
-      </CustomRouter>
+       </HashRouter>
     </React.StrictMode>
   );
 }
