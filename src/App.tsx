@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation,HashRouter } from 'react-router-dom';
 import CustomRouter, { history } from './components/CustomRouter';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -22,7 +22,7 @@ const LoadingFallback = () => (
 // Wrapper component to handle location and provide the scene
 function AppContent() {
   const location = useLocation();
-  
+
   return (
     <SceneProvider key={location.pathname}>
       <div className="App min-h-screen relative flex flex-col">
@@ -50,9 +50,9 @@ function AppContent() {
 function App() {
   return (
     <React.StrictMode>
-      <CustomRouter history={history}>
+      <HashRouter>
         <AppContent />
-      </CustomRouter>
+      </HashRouter>
     </React.StrictMode>
   );
 }
