@@ -1,15 +1,6 @@
 import React, { Suspense } from 'react';
-<<<<<<< HEAD
-import { Routes, Route, useLocation, HashRouter, Link } from 'react-router-dom';
-=======
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from 'react-router-dom';
->>>>>>> 9c23fd4c91be6de63e1cda82d411416ba91f0b91
-import CustomRouter, { history } from './components/CustomRouter';
+import { Routes, Route, useLocation, HashRouter } from 'react-router-dom';
+// import CustomRouter, { history } from './components/CustomRouter';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
