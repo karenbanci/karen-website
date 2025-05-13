@@ -30,7 +30,7 @@ function AppContent() {
           <div className="flex-grow">
             <Suspense fallback={<LoadingFallback />}>
               <PageWrapper>
-                <Routes location={location}>
+                <Routes >
                   <Route path="/" element={<Home />} />
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/project/:id" element={<ProjectDetail />} />
