@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Routes, Route, useLocation,HashRouter } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import CustomRouter, { history } from './components/CustomRouter';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -50,9 +50,9 @@ function AppContent() {
 function App() {
   return (
     <React.StrictMode>
-      <HashRouter>
+      <CustomRouter history={history}>
         <AppContent />
-      </HashRouter>
+      </CustomRouter>
     </React.StrictMode>
   );
 }

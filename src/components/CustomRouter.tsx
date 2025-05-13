@@ -30,13 +30,13 @@ const CustomRouter: React.FC<CustomRouterProps> = ({ history, children }) => {
   }, [history]);
 
   return (
-    <HashRouter
-      // navigator={history}
-      // location={state.location}
-      // navigationType={state.action}
+    <Router
+      navigator={history}
+      location={state.location}
+      navigationType={state.action}
     >
       {children}
-    </HashRouter>
+    </Router>
   );
 };
 
