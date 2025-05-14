@@ -1,36 +1,44 @@
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { useScene } from '../experience/Scene';
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useScene } from "../experience/Scene";
 
 // Sample project data (same as in Projects.tsx)
 const projects = [
   {
     id: 1,
     title: "Eleva – Life Strategy & Coaching Website",
-    description: "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
-    fullDescription: "Clean, elegant design with strategic use of white space and calming colors to inspire trust and clarity. Clear calls-to-action, including client onboarding and newsletter signup. Hero section with compelling messaging and a strong personal brand image. Structured comparison of “where you are” vs. “where you want to be” to speak directly to user pain points. Responsive layout and optimized performance across devices.",
+    description:
+      "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
+    fullDescription:
+      "Clean, elegant design with strategic use of white space and calming colors to inspire trust and clarity. Clear calls-to-action, including client onboarding and newsletter signup. Hero section with compelling messaging and a strong personal brand image. Structured comparison of “where you are” vs. “where you want to be” to speak directly to user pain points. Responsive layout and optimized performance across devices.",
     tags: ["Wix"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-home.webp",
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-home.webp",
     additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/about-eleva-2.webp","https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-plans.webp"
-
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/about-eleva-2.webp",
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-plans.webp",
     ],
     client: "Eleva",
     duration: "5 month",
     role: "Frontend Developer",
     year: "2025",
-    link: "http://www.eleva.live"
+    link: "http://www.eleva.live",
   },
   {
     id: 2,
     title: "LETIH BEAUTY – Aesthetic Wellness Brand Website",
-    description: "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body. The goal was to reflect the brand’s philosophy of inner calm, rejuvenation, and personalized care through a sophisticated and user-friendly digital experience.",
-    fullDescription: "Clean, minimalist design with earthy tones and natural imagery to evoke tranquility. Mobile-optimized layout for on-the-go users. Highlight sections for mission, vision, and core values. Visual hierarchy built around photography to establish trust and showcase the spa environment. WhatsApp contact integration for quick communication. ",
+    description:
+      "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body. The goal was to reflect the brand’s philosophy of inner calm, rejuvenation, and personalized care through a sophisticated and user-friendly digital experience.",
+    fullDescription:
+      "Clean, minimalist design with earthy tones and natural imagery to evoke tranquility. Mobile-optimized layout for on-the-go users. Highlight sections for mission, vision, and core values. Visual hierarchy built around photography to establish trust and showcase the spa environment. WhatsApp contact integration for quick communication. ",
     tags: ["JavaScript", "React", "Contentful", "Airtable"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-home.webp",
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-home.webp",
     additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-about.webp", "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-login.webp", "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-client.webp"
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-about.webp",
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-login.webp",
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-client.webp",
     ],
     shape: "box",
     color: "#7928CA",
@@ -38,18 +46,21 @@ const projects = [
     duration: "7 months",
     role: "Full Stack Developer",
     year: "2025",
-    link: "https://letihbeauty.com/"
+    link: "https://letihbeauty.com/",
   },
   {
     id: 3,
     title: "Jairo Honorio – Personal Portfolio",
-    description: "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google. The goal was to showcase his professional journey, leadership roles, and technical expertise in a clean, engaging, and easy-to-navigate format.",
-    fullDescription: "Hero Section: A vibrant, welcoming photo paired with a clear title and CTA. About Me: A brief yet impactful introduction that highlights Jairo’s entrepreneurial and software engineering background. Interactive Timeline: Visually structured career path including roles, volunteer work, and achievements. Contact Section: Encourages direct communication with an inviting message and essential contact links. To create a personal brand website that effectively communicates the impact and experience of a senior tech professional, helping him connect with collaborators, recruiters, and peers.",
+    description:
+      "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google. The goal was to showcase his professional journey, leadership roles, and technical expertise in a clean, engaging, and easy-to-navigate format.",
+    fullDescription:
+      "Hero Section: A vibrant, welcoming photo paired with a clear title and CTA. About Me: A brief yet impactful introduction that highlights Jairo’s entrepreneurial and software engineering background. Interactive Timeline: Visually structured career path including roles, volunteer work, and achievements. Contact Section: Encourages direct communication with an inviting message and essential contact links. To create a personal brand website that effectively communicates the impact and experience of a senior tech professional, helping him connect with collaborators, recruiters, and peers.",
     tags: ["Jekill", "React", "JavaScript", "AMP"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
     additionalImages: [
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-timeline.webp",
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-contact.webp"
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-contact.webp",
     ],
     shape: "torus",
     color: "#0070F3",
@@ -57,18 +68,23 @@ const projects = [
     duration: "2 months",
     role: "Full Stack Developer",
     year: "2022",
-    link: "https://jairo.jahdsoft.com/"
+    link: "https://jairo.jahdsoft.com/",
   },
   {
     id: 4,
     title: "Slap of life (Global Game Jam)",
-    description: "You live your life like any other. Wake up, eat some breakfast, go to work, save the day from government conspiracies. But there is just one thing, you MUST SLAP EVERYTHING!",
-    fullDescription: "This group project, inspired by the Global Game Jam at USV University of Silicon Valley, is centered on Make me laugh. I developed the scenario (houses, trees, and streets) in 3D using Blender and Unreal Engine.",
+    description:
+      "You live your life like any other. Wake up, eat some breakfast, go to work, save the day from government conspiracies. But there is just one thing, you MUST SLAP EVERYTHING!",
+    fullDescription:
+      "This group project, inspired by the Global Game Jam at USV University of Silicon Valley, is centered on Make me laugh. I developed the scenario (houses, trees, and streets) in 3D using Blender and Unreal Engine.",
     tags: ["Blender", "Unreal Engine", "Game Jam"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
     additionalImages: [
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-city.webp",
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-car-2.webp","https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-car.webp","https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-unreal.webp"
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-car-2.webp",
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-car.webp",
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-unreal.webp",
     ],
     shape: "octahedron",
     color: "#50E3C2",
@@ -76,17 +92,20 @@ const projects = [
     duration: "24 hours",
     role: "3D Developer",
     year: "2024",
-    link: "https://globalgamejam.org/games/2024/slap-life-6"
-  },  {
+    link: "https://globalgamejam.org/games/2024/slap-life-6",
+  },
+  {
     id: 5,
     title: "Immersive Periodic Table 3D",
-    description: "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
-    fullDescription: "This project involved creating a fully interactive 3D periodic table using React and Three.js. The table allows users to explore the properties of each element in a visually engaging way. The project was designed to be part of my portfolio and improve my skills in web development.",
+    description:
+      "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
+    fullDescription:
+      "This project involved creating a fully interactive 3D periodic table using React and Three.js. The table allows users to explore the properties of each element in a visually engaging way. The project was designed to be part of my portfolio and improve my skills in web development.",
     tags: ["Three.js", "WebGL", "React", "Blender"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project.png",
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project.png",
     additionalImages: [
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project2.png",
-
     ],
     shape: "sphere",
     color: "#FF0080",
@@ -94,16 +113,20 @@ const projects = [
     duration: "1 month",
     role: "Frontend Developer",
     year: "2023",
-    link: "https://karenbanci.github.io/periodic_table_development/"
-  },  {
+    link: "https://karenbanci.github.io/periodic_table_development/",
+  },
+  {
     id: 6,
     title: "Marble Race - Game React Three FIber",
-    description: "Bruno Simon's course project, a marble race game built with React Three Fiber.",
-    fullDescription: "This project is a part of learning course of Bruno Simon. The project was built using React Three Fiber, a React renderer for Three.js, allowing for a seamless integration of 3D graphics into the React ecosystem. It works just only desktop version. The game features a marble racing through a 3D course, with various obstacles and challenges. ",
+    description:
+      "Bruno Simon's course project, a marble race game built with React Three Fiber.",
+    fullDescription:
+      "This project is a part of learning course of Bruno Simon. The project was built using React Three Fiber, a React renderer for Three.js, allowing for a seamless integration of 3D graphics into the React ecosystem. It works just only desktop version. The game features a marble racing through a 3D course, with various obstacles and challenges. ",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
     additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-finish.png"
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-finish.png",
     ],
     shape: "box",
     color: "#7928CA",
@@ -111,13 +134,13 @@ const projects = [
     duration: "3 days",
     role: "Frontend Developer & 3D Specialist",
     year: "2024",
-    link: "https://karenbanci.github.io/game-react-three-fiber/"
+    link: "https://karenbanci.github.io/game-react-three-fiber/",
   },
 ];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const staggerContainer = {
@@ -126,40 +149,26 @@ const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
+      delayChildren: 0.2,
+    },
+  },
 };
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
-  const { addShape, clearShapes } = useScene();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
   // Find project with matching id
-  const project = projects.find(p => p.id === parseInt(id || '0')) || projects[0];
+  const project =
+    projects.find((p) => p.id === parseInt(id || "0")) || projects[0];
 
   useEffect(() => {
     // Simulate loading
     setTimeout(() => {
       setLoading(false);
     }, 500);
-
-    // Clear any existing shapes first
-    clearShapes();
-
-    // Add shape to the scene when the component mounts
-    addShape({
-      position: [0, 0, -3],
-      shape: project.shape as any,
-      size: 0.8,
-      color: project.color,
-      floatIntensity: 1.5,
-      wobbleSpeed: 0.8
-    });
-
-  }, [addShape, clearShapes, project, id]);
+  }, [project, id]);
 
   if (loading) {
     return (
@@ -173,7 +182,9 @@ export default function ProjectDetail() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-4">
         <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
-        <p className="text-gray-300 mb-8">The project you're looking for doesn't exist.</p>
+        <p className="text-gray-300 mb-8">
+          The project you're looking for doesn't exist.
+        </p>
         <Link
           to="/projects"
           className="px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white"
@@ -222,10 +233,7 @@ export default function ProjectDetail() {
             {project.title}
           </motion.h1>
 
-          <motion.div
-            className="flex flex-wrap gap-2 mb-8"
-            variants={fadeIn}
-          >
+          <motion.div className="flex flex-wrap gap-2 mb-8" variants={fadeIn}>
             {project.tags.map((tag: string, index: number) => (
               <span
                 key={index}
@@ -251,21 +259,51 @@ export default function ProjectDetail() {
                 {allImages.length > 1 && (
                   <>
                     <button
-                      onClick={() => setCurrentImageIndex(prev => (prev === 0 ? allImages.length - 1 : prev - 1))}
+                      onClick={() =>
+                        setCurrentImageIndex((prev) =>
+                          prev === 0 ? allImages.length - 1 : prev - 1
+                        )
+                      }
                       className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center hover:bg-black/70 transition-colors"
                       aria-label="Previous image"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 19l-7-7 7-7"
+                        />
                       </svg>
                     </button>
                     <button
-                      onClick={() => setCurrentImageIndex(prev => (prev === allImages.length - 1 ? 0 : prev + 1))}
+                      onClick={() =>
+                        setCurrentImageIndex((prev) =>
+                          prev === allImages.length - 1 ? 0 : prev + 1
+                        )
+                      }
                       className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center hover:bg-black/70 transition-colors"
                       aria-label="Next image"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </button>
                   </>
@@ -278,7 +316,11 @@ export default function ProjectDetail() {
                     <button
                       key={idx}
                       onClick={() => setCurrentImageIndex(idx)}
-                      className={`w-20 h-16 rounded overflow-hidden flex-shrink-0 ${currentImageIndex === idx ? 'ring-2 ring-pink-500' : 'opacity-70 hover:opacity-100'}`}
+                      className={`w-20 h-16 rounded overflow-hidden flex-shrink-0 ${
+                        currentImageIndex === idx
+                          ? "ring-2 ring-pink-500"
+                          : "opacity-70 hover:opacity-100"
+                      }`}
                     >
                       <img
                         src={img}
@@ -292,7 +334,9 @@ export default function ProjectDetail() {
             </div>
 
             <div className="backdrop-blur-sm bg-gray-900/30 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-700">Project Details</h3>
+              <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-700">
+                Project Details
+              </h3>
 
               <div className="space-y-4">
                 <div>
@@ -325,8 +369,17 @@ export default function ProjectDetail() {
                       className="text-pink-500 hover:text-pink-400 flex items-center"
                     >
                       Visit Site
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4 ml-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </a>
                   </div>
@@ -342,9 +395,14 @@ export default function ProjectDetail() {
             </div>
           </motion.div>
 
-          <motion.div variants={fadeIn} className="flex justify-between items-center">
+          <motion.div
+            variants={fadeIn}
+            className="flex justify-between items-center"
+          >
             <Link
-              to={`/project/${project.id > 1 ? project.id - 1 : projects.length}`}
+              to={`/project/${
+                project.id > 1 ? project.id - 1 : projects.length
+              }`}
               className="px-6 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors flex items-center"
             >
               <svg
@@ -363,7 +421,9 @@ export default function ProjectDetail() {
             </Link>
 
             <Link
-              to={`/project/${project.id < projects.length ? project.id + 1 : 1}`}
+              to={`/project/${
+                project.id < projects.length ? project.id + 1 : 1
+              }`}
               className="px-6 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors flex items-center"
             >
               Next Project

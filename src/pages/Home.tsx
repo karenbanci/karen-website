@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { useScene } from '../experience/Scene';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useScene } from "../experience/Scene";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const staggerContainer = {
@@ -18,49 +18,17 @@ const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
+      delayChildren: 0.2,
+    },
+  },
 };
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
-  const { addShape, clearShapes } = useScene();
 
   useEffect(() => {
     setIsMounted(true);
-
-    // Clear any existing shapes first
-    clearShapes();
-
-    // Add shapes to the scene when the component mounts
-    addShape({
-      position: [2, 0, -1],
-      shape: "tetrahedron",
-      size: 0.5,
-      color: "#FF0080",
-      floatIntensity: 1.5
-    });
-
-    addShape({
-      position: [-2, 0, -2],
-      shape: "octahedron",
-      size: 0.6,
-      color: "#7928CA",
-      floatIntensity: 2,
-      wobbleSpeed: 1.5
-    });
-
-    addShape({
-      position: [0, 1.5, -1],
-      shape: "torus",
-      size: 0.4,
-      color: "#0070F3",
-      floatIntensity: 1,
-      wobbleStrength: 0.3
-    });
-
-  }, [addShape, clearShapes]);
+  }, []);
 
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center px-4 md:px-8">
@@ -77,9 +45,9 @@ export default function Home() {
             transition: {
               delay: 0.3,
               duration: 0.8,
-              ease: [0.165, 0.84, 0.44, 1]
-            }
-          }
+              ease: [0.165, 0.84, 0.44, 1],
+            },
+          },
         }}
       >
         <motion.h1
@@ -100,8 +68,10 @@ export default function Home() {
           className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-300"
           variants={fadeIn}
         >
-          I build dynamic web applications, blending design, and codeI. Specializing in React, ThreeJS, and Python, I create interactive 3D experiences and AI-driven solutions. Passionate about innovation and problem-solving, I’m eager for new challenges in software development.
-
+          I build dynamic web applications, blending design, and codeI.
+          Specializing in React, ThreeJS, and Python, I create interactive 3D
+          experiences and AI-driven solutions. Passionate about innovation and
+          problem-solving, I’m eager for new challenges in software development.
         </motion.p>
 
         <motion.div
