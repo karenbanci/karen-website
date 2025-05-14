@@ -1,59 +1,66 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Sample project data
 const projects = [
   {
     id: 1,
     title: "Eleva",
-    description: "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
+    description:
+      "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
     tags: ["Wix"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-home.webp",
-
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-home.webp",
   },
   {
     id: 2,
     title: "Letih Beauty",
-    description: "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body.",
+    description:
+      "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body.",
     tags: ["JavaScript", "React", "Contentful", "Airtable"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-home.webp",
-
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-home.webp",
   },
   {
     id: 3,
     title: "Jairo Honorio",
-    description: "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google.",
+    description:
+      "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google.",
     tags: ["Jekill", "React", "JavaScript", "AMP"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
-
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
   },
   {
     id: 4,
     title: "Slap of life (Global Game Jam)",
-    description: "This group project, inspired by the Global Game Jam at USV University of Silicon Valley, is centered on Make me laugh.",
+    description:
+      "This group project, inspired by the Global Game Jam at USV University of Silicon Valley, is centered on Make me laugh.",
     tags: ["Blender", "Unreal Engine", "Game Jam"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
-
-  },  {
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
+  },
+  {
     id: 5,
     title: "Periodic Table 3D",
-    description: "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
+    description:
+      "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
     tags: ["Three.js", "WebGL", "React", "Blender"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project.png",
-
-  },  {
+    image: "/images/periodic-table-project.png",
+  },
+  {
     id: 6,
     title: "Marble Race - Game React Three FIber",
-    description: "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
+    description:
+      "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-    image: "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png"
-
-  }
+    image:
+      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
+  },
 ];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const staggerContainer = {
@@ -62,13 +69,12 @@ const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
+      delayChildren: 0.2,
+    },
+  },
 };
 
-const ProjectCard = ({ project, index }: { project: any, index: number }) => {
-
+const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   return (
     <motion.div
       className="bg-gray-900/40 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-pink-500/10 transition-all duration-300"
@@ -76,9 +82,9 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
       whileHover={{ y: -10, transition: { duration: 0.2 } }}
     >
       <Link
-          to={`/project/${project.id}`}
-          className="inline-block text-sm font-medium text-pink-500 hover:text-pink-400 transition-colors w-full"
-        >
+        to={`/project/${project.id}`}
+        className="inline-block text-sm font-medium text-pink-500 hover:text-pink-400 transition-colors w-full"
+      >
         <div className="relative h-48 overflow-hidden">
           <img
             src={project.image}
@@ -91,8 +97,7 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
             </div>
           </div>
         </div>
-
-        </Link>
+      </Link>
 
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
@@ -121,8 +126,6 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
 };
 
 export default function Projects() {
-
-
   return (
     <div className="min-h-screen py-20 px-4 md:px-8">
       {/* Main content */}
@@ -143,8 +146,8 @@ export default function Projects() {
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeIn}
           >
-            Explore my portfolio of creative development work, from interactive 3D
-            experiences to user interface designs.
+            Explore my portfolio of creative development work, from interactive
+            3D experiences to user interface designs.
           </motion.p>
         </motion.div>
 

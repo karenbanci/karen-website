@@ -102,11 +102,8 @@ const projects = [
     fullDescription:
       "This project involved creating a fully interactive 3D periodic table using React and Three.js. The table allows users to explore the properties of each element in a visually engaging way. The project was designed to be part of my portfolio and improve my skills in web development.",
     tags: ["Three.js", "WebGL", "React", "Blender"],
-    image:
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project.png",
-    additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/periodic-table-project2.png",
-    ],
+    image: "/images/periodic-table-project.png",
+    additionalImages: ["/images/periodic-table-project2.png"],
     shape: "sphere",
     color: "#FF0080",
     client: "Self Project",
