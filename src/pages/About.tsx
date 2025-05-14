@@ -168,7 +168,6 @@ export default function About() {
               </p>
               <br />
             </motion.div>
-            <a href="/resume/resume.pdf">Download my Resume</a>
 
             <motion.h2
               className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
@@ -189,6 +188,15 @@ export default function About() {
                 </motion.div>
               ))}
             </motion.div>
+            <a
+              href="/resume/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="px-8 py-3 mt-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
+            hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300 inline-block"
+            >
+              Download My Resume
+            </a>
           </motion.div>
 
           <motion.div
