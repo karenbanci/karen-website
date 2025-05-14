@@ -9,8 +9,7 @@ const projects = [
     description:
       "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
     tags: ["Wix"],
-    image:
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-home.webp",
+    image: "/images/eleva-home.png",
   },
   {
     id: 2,
