@@ -13,11 +13,12 @@ const projects = [
     fullDescription:
       "Clean, elegant design with strategic use of white space and calming colors to inspire trust and clarity. Clear calls-to-action, including client onboarding and newsletter signup. Hero section with compelling messaging and a strong personal brand image. Structured comparison of “where you are” vs. “where you want to be” to speak directly to user pain points. Responsive layout and optimized performance across devices.",
     tags: ["Wix"],
-    image:
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-home.webp",
+    image: "/images/eleva-home.png",
     additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/about-eleva-2.webp",
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/eleva-plans.webp",
+      "images/eleva-home-pt.png",
+      "images/eleva-contact.png",
+      "images/eleva-plan.png",
+      "images/eleva-mockup.png",
     ],
     client: "Eleva",
     duration: "5 month",
@@ -33,12 +34,13 @@ const projects = [
     fullDescription:
       "Clean, minimalist design with earthy tones and natural imagery to evoke tranquility. Mobile-optimized layout for on-the-go users. Highlight sections for mission, vision, and core values. Visual hierarchy built around photography to establish trust and showcase the spa environment. WhatsApp contact integration for quick communication. ",
     tags: ["JavaScript", "React", "Contentful", "Airtable"],
-    image:
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-home.webp",
+    image: "images/letih-home.webp",
     additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-about.webp",
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-login.webp",
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-client.webp",
+      "images/letih-about.webp",
+      "images/letih-login.webp",
+      "images/letih-client.webp",
+      "images/letih-skin-routine.png",
+      "images/letih-mockup.png",
     ],
     shape: "box",
     color: "#7928CA",
@@ -59,8 +61,8 @@ const projects = [
     image:
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
     additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-timeline.webp",
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-contact.webp",
+      "images/jairo-mockup.jpeg",
     ],
     shape: "torus",
     color: "#0070F3",
@@ -78,13 +80,12 @@ const projects = [
     fullDescription:
       "This group project, inspired by the Global Game Jam at USV University of Silicon Valley, is centered on Make me laugh. I developed the scenario (houses, trees, and streets) in 3D using Blender and Unreal Engine.",
     tags: ["Blender", "Unreal Engine", "Game Jam"],
-    image:
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
+    image: "images/slap-cover.webp",
     additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-city.webp",
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-car-2.webp",
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-car.webp",
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-unreal.webp",
+      "images/slap-city.webp",
+      "images/slap-car-2.webp",
+      "images/slap-car.webp",
+      "images/slap-unreal.webp",
     ],
     shape: "octahedron",
     color: "#50E3C2",
@@ -120,11 +121,8 @@ const projects = [
     fullDescription:
       "This project is a part of learning course of Bruno Simon. The project was built using React Three Fiber, a React renderer for Three.js, allowing for a seamless integration of 3D graphics into the React ecosystem. It works just only desktop version. The game features a marble racing through a 3D course, with various obstacles and challenges. ",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-    image:
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
-    additionalImages: [
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-finish.png",
-    ],
+    image: "images/marble-race-game.png",
+    additionalImages: ["images/marble-race-finish.png"],
     shape: "box",
     color: "#7928CA",
     client: "Self Project",
