@@ -50,48 +50,54 @@ export default function Home() {
           },
         }}
       >
-        <motion.h1
-          className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500"
-          variants={fadeIn}
-        >
-          Karen Banci
-        </motion.h1>
-
-        <motion.h2
-          className="text-2xl md:text-3xl mb-8 text-gray-200"
-          variants={fadeIn}
-        >
-          Full Stack Developer
-        </motion.h2>
-
-        <motion.p
-          className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-300"
-          variants={fadeIn}
-        >
-          I build dynamic web applications, blending design, and codeI.
-          Specializing in React, ThreeJS, and Python, I create interactive 3D
-          experiences and AI-driven solutions. Passionate about innovation and
-          problem-solving, I’m eager for new challenges in software development.
-        </motion.p>
-
         <motion.div
-          className="flex flex-wrap justify-center gap-4"
+          className="backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl"
           variants={fadeIn}
         >
-          <Link
-            to="/projects"
-            className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
+          <motion.h1
+            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500"
+            variants={fadeIn}
+          >
+            Karen Banci
+          </motion.h1>
+
+          <motion.h2
+            className="text-2xl md:text-3xl mb-8 text-gray-200"
+            variants={fadeIn}
+          >
+            Full Stack Developer
+          </motion.h2>
+
+          <motion.p
+            className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-300"
+            variants={fadeIn}
+          >
+            I build dynamic web applications, blending design, and codeI.
+            Specializing in React, ThreeJS, and Python, I create interactive 3D
+            experiences and AI-driven solutions. Passionate about innovation and
+            problem-solving, I’m eager for new challenges in software
+            development.
+          </motion.p>
+
+          <motion.div
+            className="flex flex-wrap justify-center gap-4"
+            variants={fadeIn}
+          >
+            <Link
+              to="/projects"
+              className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
             hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300"
-          >
-            View Projects
-          </Link>
-          <Link
-            to="/contact"
-            className="px-8 py-3 rounded-full border border-gray-500 text-white font-medium
+            >
+              View Projects
+            </Link>
+            <Link
+              to="/contact"
+              className="px-8 py-3 rounded-full border border-gray-500 text-white font-medium
             hover:border-pink-500 hover:text-pink-500 transition-all duration-300"
-          >
-            Contact Me
-          </Link>
+            >
+              Contact Me
+            </Link>
+          </motion.div>
         </motion.div>
       </motion.div>
     </div>
