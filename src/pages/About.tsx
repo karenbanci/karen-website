@@ -135,153 +135,163 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
+            className="backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl"
+            variants={fadeIn}
           >
-            <motion.h2
-              className="text-2xl font-bold mb-6 pb-2 border-b border-gray-800"
-              variants={fadeIn}
-            >
-              My Story
-            </motion.h2>
-
-            <motion.div variants={fadeIn} className="space-y-4 text-gray-300">
-              <p>
-                Hello! I'm Karen Caroline Honorio Banci, a Full Stack Developer
-                with a background in Chemistry and a passion for technology. My
-                journey began in science, but in 2021, I transitioned into
-                software development, where I found my true calling in coding
-                and problem-solving.
-              </p>
-              <p>
-                Since moving to Silicon Valley, I've been expanding my expertise
-                in Computer Science at Foothill College while building AI
-                applications and interactive 3D experiences. I specialize in
-                React, ThreeJS, and Python, crafting dynamic and immersive
-                digital solutions that blend design and technology.
-              </p>
-              <p>
-                When I'm not coding, I enjoy exploring AI and staying updated on
-                the latest tech trends. I'm always eager for new challenges and
-                excited about opportunities to create innovative digital.
-              </p>
-              <br />
-            </motion.div>
-
-            <motion.h2
-              className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
-              variants={fadeIn}
-            >
-              Skills
-            </motion.h2>
-
             <motion.div
-              className="grid grid-cols-1 gap-2"
-              variants={staggerContainer}
               initial="hidden"
               animate="visible"
+              variants={staggerContainer}
             >
-              {skills.map((skill) => (
-                <motion.div key={skill.name} variants={fadeIn}>
-                  <SkillBar name={skill.name} level={skill.level} />
-                </motion.div>
-              ))}
-            </motion.div>
-            <a
-              href="/resume/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="px-8 py-3 mt-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
+              <motion.h2
+                className="text-2xl font-bold mb-6 pb-2 border-b border-gray-800"
+                variants={fadeIn}
+              >
+                My Story
+              </motion.h2>
+
+              <motion.div variants={fadeIn} className="space-y-4 text-gray-300">
+                <p>
+                  Hello! I'm Karen Caroline Honorio Banci, a Full Stack
+                  Developer with a background in Chemistry and a passion for
+                  technology. My journey began in science, but in 2021, I
+                  transitioned into software development, where I found my true
+                  calling in coding and problem-solving.
+                </p>
+                <p>
+                  Since moving to Silicon Valley, I've been expanding my
+                  expertise in Computer Science at Foothill College while
+                  building AI applications and interactive 3D experiences. I
+                  specialize in React, ThreeJS, and Python, crafting dynamic and
+                  immersive digital solutions that blend design and technology.
+                </p>
+                <p>
+                  When I'm not coding, I enjoy exploring AI and staying updated
+                  on the latest tech trends. I'm always eager for new challenges
+                  and excited about opportunities to create innovative digital.
+                </p>
+                <br />
+              </motion.div>
+
+              <motion.h2
+                className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
+                variants={fadeIn}
+              >
+                Skills
+              </motion.h2>
+
+              <motion.div
+                className="grid grid-cols-1 gap-2"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+              >
+                {skills.map((skill) => (
+                  <motion.div key={skill.name} variants={fadeIn}>
+                    <SkillBar name={skill.name} level={skill.level} />
+                  </motion.div>
+                ))}
+              </motion.div>
+              <a
+                href="/resume/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="px-8 py-3 mt-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
             hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300 inline-block"
-            >
-              Download My Resume
-            </a>
+              >
+                Download My Resume
+              </a>
+            </motion.div>
           </motion.div>
 
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
+            className="backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl"
+            variants={fadeIn}
           >
-            <motion.h2
-              className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800"
-              variants={fadeIn}
-            >
-              Experience
-            </motion.h2>
-
             <motion.div
-              className="space-y-4"
-              variants={staggerContainer}
               initial="hidden"
               animate="visible"
+              variants={staggerContainer}
             >
-              {experiences.map((exp) => (
-                <Experience
-                  key={exp.id}
-                  role={exp.role}
-                  company={exp.company}
-                  period={exp.period}
-                  description={exp.description}
-                  link={exp.link}
-                />
-              ))}
-            </motion.div>
+              <motion.h2
+                className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800"
+                variants={fadeIn}
+              >
+                Experience
+              </motion.h2>
 
-            <motion.h2
-              className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
-              variants={fadeIn}
-            >
-              Education
-            </motion.h2>
+              <motion.div
+                className="space-y-4"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+              >
+                {experiences.map((exp) => (
+                  <Experience
+                    key={exp.id}
+                    role={exp.role}
+                    company={exp.company}
+                    period={exp.period}
+                    description={exp.description}
+                    link={exp.link}
+                  />
+                ))}
+              </motion.div>
 
-            <motion.div variants={fadeIn}>
-              <div className="mb-4">
-                <h3 className="text-xl font-bold">
-                  Associate's Degree, Computer Science
-                </h3>
-                <div className="text-gray-300 text-sm mb-2">
-                  Foothill College • 2022 - 2026
+              <motion.h2
+                className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
+                variants={fadeIn}
+              >
+                Education
+              </motion.h2>
+
+              <motion.div variants={fadeIn}>
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold">
+                    Associate's Degree, Computer Science
+                  </h3>
+                  <div className="text-gray-300 text-sm mb-2">
+                    Foothill College • 2022 - 2026
+                  </div>
+                  <p className="text-gray-400">
+                    I gained expertise in programming, algorithms, data
+                    structures, databases, operating systems, software
+                    development, cybersecurity, artificial intelligence,
+                    networking, and computational theory, developing strong
+                    problem-solving skills for technology and software
+                    engineering careers.
+                  </p>
                 </div>
-                <p className="text-gray-400">
-                  I gained expertise in programming, algorithms, data
-                  structures, databases, operating systems, software
-                  development, cybersecurity, artificial intelligence,
-                  networking, and computational theory, developing strong
-                  problem-solving skills for technology and software engineering
-                  careers.
-                </p>
-              </div>
 
-              <div className="mb-4">
-                <h3 className="text-xl font-bold">
-                  Bootcamp, Full Stack Web Developer - Batch #766
-                </h3>
-                <div className="text-gray-300 text-sm mb-2">
-                  Le Wagon • Oct 2021 - Dec 2021
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold">
+                    Bootcamp, Full Stack Web Developer - Batch #766
+                  </h3>
+                  <div className="text-gray-300 text-sm mb-2">
+                    Le Wagon • Oct 2021 - Dec 2021
+                  </div>
+                  <p className="text-gray-400">
+                    Developer tools and workflow, Ruby programming, Software
+                    architecture, relational database, SQL & ORM, Bootstrap, JS,
+                    HTML and CSS, Git, GitHub and marketplace development (like
+                    Airbnb).
+                  </p>
                 </div>
-                <p className="text-gray-400">
-                  Developer tools and workflow, Ruby programming, Software
-                  architecture, relational database, SQL & ORM, Bootstrap, JS,
-                  HTML and CSS, Git, GitHub and marketplace development (like
-                  Airbnb).
-                </p>
-              </div>
 
-              <div className="mb-4">
-                <h3 className="text-xl font-bold">
-                  Bachelor's Degree, Chemistry
-                </h3>
-                <div className="text-gray-300 text-sm mb-2">
-                  Faculdade São Bernardo - FASB, Brazil • Jan 2013 -Dec 2016
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold">
+                    Bachelor's Degree, Chemistry
+                  </h3>
+                  <div className="text-gray-300 text-sm mb-2">
+                    Faculdade São Bernardo - FASB, Brazil • Jan 2013 -Dec 2016
+                  </div>
+                  <p className="text-gray-400">
+                    I studied organic, inorganic, physical, analytical, and
+                    biochemistry, gaining expertise in laboratory techniques,
+                    research methods, and chemical safety principles.
+                  </p>
                 </div>
-                <p className="text-gray-400">
-                  I studied organic, inorganic, physical, analytical, and
-                  biochemistry, gaining expertise in laboratory techniques,
-                  research methods, and chemical safety principles.
-                </p>
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
