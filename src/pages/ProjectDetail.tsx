@@ -131,6 +131,24 @@ const projects = [
     year: "2024",
     link: "https://karenbanci.github.io/game-react-three-fiber/",
   },
+  // {
+  //   id: 7,
+  //   title: "Marble Race - Game React Three FIber",
+  //   description:
+  //     "Bruno Simon's course project, a marble race game built with React Three Fiber.",
+  //   fullDescription:
+  //     "This project is a part of learning course of Bruno Simon. The project was built using React Three Fiber, a React renderer for Three.js, allowing for a seamless integration of 3D graphics into the React ecosystem. It works just only desktop version. The game features a marble racing through a 3D course, with various obstacles and challenges. ",
+  //   tags: ["React", "React Three Fiber", "Three.js", "Vite"],
+  //   image: "images/marble-race-game.png",
+  //   additionalImages: ["images/marble-race-finish.png"],
+  //   shape: "box",
+  //   color: "#7928CA",
+  //   client: "Self Project",
+  //   duration: "3 days",
+  //   role: "Frontend Developer & 3D Specialist",
+  //   year: "2024",
+  //   link: "https://karenbanci.github.io/game-react-three-fiber/",
+  // },
 ];
 
 const fadeIn = {
