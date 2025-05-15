@@ -55,6 +55,15 @@ const projects = [
     image:
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
   },
+  // {
+  //   id: 7,
+  //   title: "Marble Race - Game React Three FIber",
+  //   description:
+  //     "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
+  //   tags: ["React", "React Three Fiber", "Three.js", "Vite"],
+  //   image:
+  //     "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
+  // },
 ];
 
 const fadeIn = {
