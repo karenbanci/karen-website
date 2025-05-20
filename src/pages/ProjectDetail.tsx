@@ -7,6 +7,43 @@ import { useScene } from "../experience/Scene";
 const projects = [
   {
     id: 1,
+    title: "Neural Network ",
+    description:
+      "This is a project is focused on the design of an AI application that can predict and make decisions autonomously.",
+    fullDescription:
+      "Designed and implemented an advanced AI application in Python, a hands-on project from Foothill College, focused on autonomous prediction and decision-making. This highlights the creation of intelligent agents that can analyze data, foresee outcomes, and execute actions independently.",
+    tags: ["Python", "AI", "Machine Learning", "Neural Networking"],
+    image: "/images/neural-network1.webp",
+    additionalImages: ["/images/neural-network2.webp"],
+    client: "Academic Project at Foothill College",
+    duration: "12 weeks",
+    role: "Computer Science",
+    year: "2023",
+    link: "https://github.com/karenbanci/study_material/tree/master/mini-projects/neural-network",
+  },
+  {
+    id: 2,
+    title: "EcoScan - Hackathon Project - 4th place",
+    description:
+      "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
+    fullDescription: `My core contribution to EcoScan centered on front-end development, creating the intuitive Chrome extension and mobile app UI for seamless eco-impact insights. I focused on delivering a user-friendly experience for barcode scanning, search, and real-time data display.
+      We're building EcoScan, a suite of tools designed to seamlessly integrate environmental impact data into your shopping experience. Whether you're Browse on Amazon or in the grocery store, EcoScan provides instant transparency.Our solution includes: Browser Extension: A Chrome extension that overlays product listings with critical carbon emission and environmental impact details. Mobile App: A powerful app featuring: Barcode Scanner: Instantly scan products to view their carbon and water footprints, and see how they compare to alternatives. Search Function: Manually search our real-time database for product environmental information.Favorites & History: Track preferred eco-friendly products and review your scanning history. Scoring Methodology: Understand how products are scored for their environmental impact. EcoScan empowers consumers to make informed, sustainable decisions. By providing accessible data on a product's lifecycle – from farm to transport – we help individuals contribute to global zero-carbon pledges and broader sustainability goals. Our real-time database, hosted on Airtable, pulls data from government resources and product sheets, allowing us to continuously update and refine information. This robust backend ensures that you always have access to accurate, up-to-date environmental insights. Team: Karen Banci, Jairo Honorio, Sarah Young and Phil Roth.`,
+    tags: ["Python", "Figma", "Software Development", "Web Development"],
+    image: "/images/ecoScan5.webp",
+    additionalImages: [
+      "images/ecoScan4.webp",
+      "images/ecoScan3.webp",
+      "images/ecoScan2.webp",
+      "images/ecoScan1.webp",
+    ],
+    client: "Self Project",
+    duration: "24 hours",
+    role: "Frontend Developer",
+    year: "2023",
+    link: "https://www.youtube.com/watch?v=RBm_2s8Qh4s&ab_channel=KarenHonorioBanci",
+  },
+  {
+    id: 3,
     title: "Eleva – Life Strategy & Coaching Website",
     description:
       "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
@@ -27,7 +64,7 @@ const projects = [
     link: "http://www.eleva.live",
   },
   {
-    id: 2,
+    id: 4,
     title: "LETIH BEAUTY – Aesthetic Wellness Brand Website",
     description:
       "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body. The goal was to reflect the brand’s philosophy of inner calm, rejuvenation, and personalized care through a sophisticated and user-friendly digital experience.",
@@ -51,7 +88,7 @@ const projects = [
     link: "https://letihbeauty.com/",
   },
   {
-    id: 3,
+    id: 5,
     title: "Jairo Honorio – Personal Portfolio",
     description:
       "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google. The goal was to showcase his professional journey, leadership roles, and technical expertise in a clean, engaging, and easy-to-navigate format.",
@@ -73,7 +110,7 @@ const projects = [
     link: "https://jairo.jahdsoft.com/",
   },
   {
-    id: 4,
+    id: 6,
     title: "Slap of life (Global Game Jam)",
     description:
       "You live your life like any other. Wake up, eat some breakfast, go to work, save the day from government conspiracies. But there is just one thing, you MUST SLAP EVERYTHING!",
@@ -96,7 +133,7 @@ const projects = [
     link: "https://globalgamejam.org/games/2024/slap-life-6",
   },
   {
-    id: 5,
+    id: 7,
     title: "Immersive Periodic Table 3D",
     description:
       "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
@@ -114,7 +151,7 @@ const projects = [
     link: "https://karenbanci.github.io/periodic_table_development/",
   },
   {
-    id: 6,
+    id: 8,
     title: "Marble Race - Game React Three FIber",
     description:
       "Bruno Simon's course project, a marble race game built with React Three Fiber.",
