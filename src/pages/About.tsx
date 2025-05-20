@@ -54,10 +54,27 @@ const experiences = [
     id: 3,
     role: "Frontend Developer - Volunteer",
     company: "Oppia Foundation",
-    period: "2016 - 2018",
+    period: "Jul 2022 - Dec 2022",
     description:
       "Debugging and fixing issues in real-time to enhance user experience, writing open-source code based on technical requirements, reproducing and resolving bugs, reporting findings to Front-end Seniors, and identifying code improvement opportunities.",
     link: "https://www.oppiafoundation.org/",
+  },
+  {
+    id: 4,
+    role: "Career transition",
+    company: "Career Break",
+    period: "Sep 2021 - Jul 2022",
+    description: "",
+    link: "",
+  },
+  {
+    id: 4,
+    role: "Chemistry Scientist",
+    company: "CPA Corantes e Produtos para Anodização de Alumínio Ltda",
+    period: "Sep 2016 - Sep 2021",
+    description:
+      "Developed anodizing chemicals and dyes for dyeing aluminum, resulting in expansion of the product line, improved color consistency, entry into new markets with new products; Quality control following ISO 9001 standards, leading to reduction in product defects, successful recertification audits with zero non-conformances; Managed laboratory chemical purchases and controlled inventory efficiently; Drafting of FISPQ and MSDS safety documents, significantly improving workplace safety evidenced reduction in safety incidents, and fostering a stronger safety culture;  Developed chemical handling safety training programs, leading to improved employee safety awareness and compliance; Pioneer advancements in chemical engineering processes and production methodologies; Optimized spectrophotometer processes for advanced dye analysis development, resulting in a reduction in analysis time, improved accuracy of color matching, or accelerated the development of new dye formulations; Effluent treatment process optimization for enhanced environmental sustainability, reducing specific pollutant levels, decreasing water consumption, and achieving compliance with new stricter environmental regulations, saving potential fines ",
+    link: "http://www.cpacorantes.com.br",
   },
 ];
 
@@ -192,51 +209,6 @@ export default function About() {
                   </motion.div>
                 ))}
               </motion.div>
-              <a
-                href="/resume/resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="px-8 py-3 mt-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
-            hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300 inline-block"
-              >
-                Download My Resume
-              </a>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl"
-            variants={fadeIn}
-          >
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
-            >
-              <motion.h2
-                className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800"
-                variants={fadeIn}
-              >
-                Experience
-              </motion.h2>
-
-              <motion.div
-                className="space-y-4"
-                variants={staggerContainer}
-                initial="hidden"
-                animate="visible"
-              >
-                {experiences.map((exp) => (
-                  <Experience
-                    key={exp.id}
-                    role={exp.role}
-                    company={exp.company}
-                    period={exp.period}
-                    description={exp.description}
-                    link={exp.link}
-                  />
-                ))}
-              </motion.div>
 
               <motion.h2
                 className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
@@ -292,6 +264,51 @@ export default function About() {
                   </p>
                 </div>
               </motion.div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl"
+            variants={fadeIn}
+          >
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.h2
+                className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800"
+                variants={fadeIn}
+              >
+                Experience
+              </motion.h2>
+
+              <motion.div
+                className="space-y-4"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+              >
+                {experiences.map((exp) => (
+                  <Experience
+                    key={exp.id}
+                    role={exp.role}
+                    company={exp.company}
+                    period={exp.period}
+                    description={exp.description}
+                    link={exp.link}
+                  />
+                ))}
+              </motion.div>
+              <a
+                href="/resume/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="px-8 py-3 mt-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
+            hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300 inline-block"
+              >
+                Download My Resume
+              </a>
             </motion.div>
           </motion.div>
         </div>
