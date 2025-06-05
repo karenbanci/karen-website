@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import BtnResume from "../components/BtnResume";
 import { useScene } from "../experience/Scene";
 
 const fadeIn = {
@@ -97,6 +98,7 @@ export default function Home() {
             >
               Contact Me
             </Link>
+            <BtnResume />
           </motion.div>
         </motion.div>
       </motion.div>

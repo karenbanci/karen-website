@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import BtnResume from "../components/BtnResume";
 import { useEffect } from "react";
 import { useScene } from "../experience/Scene";
 
@@ -300,15 +301,9 @@ export default function About() {
                   />
                 ))}
               </motion.div>
-              <a
-                href="/resume/resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="px-8 py-3 mt-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
-            hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300 inline-block"
-              >
-                Download My Resume
-              </a>
+              <div className="mb-4"> </div>
+
+              <BtnResume />
             </motion.div>
           </motion.div>
         </div>
