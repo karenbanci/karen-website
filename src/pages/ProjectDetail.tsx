@@ -168,24 +168,24 @@ const projects = [
     year: "2024",
     link: "https://karenbanci.github.io/game-react-three-fiber/",
   },
-  // {
-  //   id: 7,
-  //   title: "Marble Race - Game React Three FIber",
-  //   description:
-  //     "Bruno Simon's course project, a marble race game built with React Three Fiber.",
-  //   fullDescription:
-  //     "This project is a part of learning course of Bruno Simon. The project was built using React Three Fiber, a React renderer for Three.js, allowing for a seamless integration of 3D graphics into the React ecosystem. It works just only desktop version. The game features a marble racing through a 3D course, with various obstacles and challenges. ",
-  //   tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-  //   image: "images/marble-race-game.png",
-  //   additionalImages: ["images/marble-race-finish.png"],
-  //   shape: "box",
-  //   color: "#7928CA",
-  //   client: "Self Project",
-  //   duration: "3 days",
-  //   role: "Frontend Developer & 3D Specialist",
-  //   year: "2024",
-  //   link: "https://karenbanci.github.io/game-react-three-fiber/",
-  // },
+  {
+    id: 9,
+    title: "Mario Jump",
+    description:
+      "Mario Jump is an arcade-style endless runner game where the challenge is the player's endurance and reaction time. The goal is not to finish a level, but to survive as long as possible to achieve a high score.",
+    fullDescription:
+      "Make Mario jump over a continuous series of green pipes that move from the right to the left of the screen. The game is controlled with a single action. The player can press any key on the keyboard or click the screen to make Mario jump. The score increases by one point for each pipe the player successfully jumps over. The game ends immediately if Mario collides with one of the pipes. A Game Over screen appears, and the final score is recorded.",
+    tags: ["JavaScript", "CSS", "HTML", "Game"],
+    image: "images/mario-jump.png",
+    additionalImages: ["/images/mario-jump.mov"],
+    shape: "box",
+    color: "#7928CA",
+    client: "Self Project",
+    duration: "2 hours",
+    role: "Frontend Developer",
+    year: "2022",
+    link: "https://karenbanci.github.io/mini-games/mario-jump/index.html",
+  },
 ];
 
 const fadeIn = {
@@ -300,11 +300,27 @@ export default function ProjectDetail() {
           >
             <div className="md:col-span-2">
               <div className="relative rounded-xl overflow-hidden aspect-video mb-4">
-                <img
-                  src={allImages[currentImageIndex]}
-                  alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                {(() => {
+                  const currentMedia = allImages[currentImageIndex];
+                  const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(currentMedia);
+                  return isVideo ? (
+                    <video
+                      src={currentMedia}
+                      className="w-full h-full object-cover"
+                      controls
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                  ) : (
+                    <img
+                      src={currentMedia}
+                      alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  );
+                })()}
 
                 {allImages.length > 1 && (
                   <>
@@ -362,23 +378,36 @@ export default function ProjectDetail() {
 
               {allImages.length > 1 && (
                 <div className="flex space-x-2 overflow-x-auto py-2">
-                  {allImages.map((img: string, idx: number) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentImageIndex(idx)}
-                      className={`w-20 h-16 rounded overflow-hidden flex-shrink-0 ${
-                        currentImageIndex === idx
-                          ? "ring-2 ring-pink-500"
-                          : "opacity-70 hover:opacity-100"
-                      }`}
-                    >
-                      <img
-                        src={img}
-                        alt={`Thumbnail ${idx + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
+                  {allImages.map((media: string, idx: number) => {
+                    const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(media);
+                    return (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentImageIndex(idx)}
+                        className={`w-20 h-16 rounded overflow-hidden flex-shrink-0 ${
+                          currentImageIndex === idx
+                            ? "ring-2 ring-pink-500"
+                            : "opacity-70 hover:opacity-100"
+                        }`}
+                      >
+                        {isVideo ? (
+                          <video
+                            src={media}
+                            className="w-full h-full object-cover"
+                            muted
+                            playsInline
+                            preload="metadata"
+                          />
+                        ) : (
+                          <img
+                            src={media}
+                            alt={`Thumbnail ${idx + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>

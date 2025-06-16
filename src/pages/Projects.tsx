@@ -71,15 +71,14 @@ const projects = [
     image:
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
   },
-  // {
-  //   id: 7,
-  //   title: "Marble Race - Game React Three FIber",
-  //   description:
-  //     "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
-  //   tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-  //   image:
-  //     "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
-  // },
+  {
+    id: 9,
+    title: "Mario Jump",
+    description:
+      "Mario Jump is an arcade-style endless runner game where the challenge is the player's endurance and reaction time.",
+    tags: ["JavaScript", "CSS", "HTML", "Game"],
+    image: "/images/mario-jump.png",
+  },
 ];
 
 const fadeIn = {
