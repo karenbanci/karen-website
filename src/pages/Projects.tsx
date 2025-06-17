@@ -77,7 +77,7 @@ const projects = [
     description:
       "Mario Jump is an arcade-style endless runner game where the challenge is the player's endurance and reaction time.",
     tags: ["JavaScript", "CSS", "HTML", "Game"],
-    image: "/images/mario-jump.png",
+    image: "/images/mario-jump.mov",
   },
 ];
 
@@ -109,11 +109,22 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
         className="inline-block text-sm font-medium text-pink-500 hover:text-pink-400 transition-colors w-full"
       >
         <div className="relative h-48 overflow-hidden">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-          />
+          {/\.(mp4|webm|ogg|mov)$/i.test(project.image) ? (
+            <video
+              src={project.image}
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          ) : (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+            />
+          )}
           <div className="absolute top-0 right-0 p-3">
             <div className="w-8 h-8 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full">
               <span className="text-xs font-semibold">#{index + 1}</span>
