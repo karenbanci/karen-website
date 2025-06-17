@@ -1,8 +1,8 @@
-import { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
-import { Points, PointMaterial } from '@react-three/drei';
-import * as THREE from 'three';
-import * as random from 'maath/random';
+import { useRef, useMemo } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Points, PointMaterial } from "@react-three/drei";
+import * as THREE from "three";
+import * as random from "maath/random";
 
 interface BackgroundProps {
   count?: number;
@@ -16,7 +16,7 @@ export default function Background({
   count = 5000,
   size = 0.015,
   radius = 4,
-  colors = ['#7928CA', '#FF0080'],
+  colors = ["#756E3E", "#845839"],
   speed = 0.2,
 }: BackgroundProps) {
   const points = useRef<THREE.Points>(null);
@@ -53,7 +53,12 @@ export default function Background({
   });
 
   return (
-    <Points ref={points} positions={particlesPosition} colors={particleColors} stride={3}>
+    <Points
+      ref={points}
+      positions={particlesPosition}
+      colors={particleColors}
+      stride={3}
+    >
       <PointMaterial
         transparent
         vertexColors

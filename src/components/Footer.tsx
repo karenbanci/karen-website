@@ -4,13 +4,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-12 px-4 md:px-8 relative z-10 backdrop-blur-sm bg-black/30">
+    <footer className="py-12 px-4 md:px-8 relative z-10 backdrop-blur-sm bg-black/10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
             <Link
               to="/"
-              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 mb-4 inline-block"
+              className="text-2xl font-bold bg-clip-text text-copper-600 mb-4 inline-block"
             >
               KB
             </Link>
