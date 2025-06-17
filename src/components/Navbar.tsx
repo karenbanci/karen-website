@@ -28,8 +28,8 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen
-          ? "py-4 backdrop-blur-lg bg-makara-50/10"
-          : "py-6"
+          ? "py-4 backdrop-blur-lg bg-pesto-400/10"
+          : "py-6 bg-pesto-200/10"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
