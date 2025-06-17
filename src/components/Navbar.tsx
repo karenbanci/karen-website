@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,35 +20,38 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled || isMenuOpen ? 'py-4 backdrop-blur-lg bg-black/50' : 'py-6'
+        isScrolled || isMenuOpen ? "py-4 backdrop-blur-lg bg-black/10" : "py-6"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
+          <Link
+            to="/"
+            className="text-2xl font-bold bg-clip-text text-copper-600"
+          >
             KarenHB
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <NavLink to="/" isActive={isActive('/')}>
+            <NavLink to="/" isActive={isActive("/")}>
               Home
             </NavLink>
-            <NavLink to="/projects" isActive={isActive('/projects')}>
+            <NavLink to="/projects" isActive={isActive("/projects")}>
               Projects
             </NavLink>
-            <NavLink to="/about" isActive={isActive('/about')}>
+            <NavLink to="/about" isActive={isActive("/about")}>
               About
             </NavLink>
-            <NavLink to="/contact" isActive={isActive('/contact')}>
+            <NavLink to="/contact" isActive={isActive("/contact")}>
               Contact
             </NavLink>
           </div>
@@ -65,7 +68,9 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className={`transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}
+              className={`transition-all duration-300 ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
             >
               <path
                 d="M3 12H21M3 6H21M3 18H21"
@@ -81,7 +86,9 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className={`absolute transition-all duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute transition-all duration-300 ${
+                isMenuOpen ? "opacity-100" : "opacity-0"
+              }`}
             >
               <path
                 d="M18 6L6 18M6 6L18 18"
@@ -97,22 +104,40 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <motion.div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          isMenuOpen ? "max-h-96" : "max-h-0"
+        }`}
         initial={false}
-        animate={{ height: isMenuOpen ? 'auto' : 0 }}
+        animate={{ height: isMenuOpen ? "auto" : 0 }}
         transition={{ duration: 0.3 }}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-          <MobileNavLink to="/" isActive={isActive('/')} onClick={() => setIsMenuOpen(false)}>
+          <MobileNavLink
+            to="/"
+            isActive={isActive("/")}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Home
           </MobileNavLink>
-          <MobileNavLink to="/projects" isActive={isActive('/projects')} onClick={() => setIsMenuOpen(false)}>
+          <MobileNavLink
+            to="/projects"
+            isActive={isActive("/projects")}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Projects
           </MobileNavLink>
-          <MobileNavLink to="/about" isActive={isActive('/about')} onClick={() => setIsMenuOpen(false)}>
+          <MobileNavLink
+            to="/about"
+            isActive={isActive("/about")}
+            onClick={() => setIsMenuOpen(false)}
+          >
             About
           </MobileNavLink>
-          <MobileNavLink to="/contact" isActive={isActive('/contact')} onClick={() => setIsMenuOpen(false)}>
+          <MobileNavLink
+            to="/contact"
+            isActive={isActive("/contact")}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Contact
           </MobileNavLink>
         </div>
@@ -133,7 +158,7 @@ function NavLink({ to, isActive, children }: NavLinkProps) {
     <Link
       to={to}
       className={`relative font-medium transition-colors text-lg ${
-        isActive ? 'text-white' : 'text-gray-300 hover:text-white'
+        isActive ? "text-copper-600" : "text-copper-900 hover:text-copper-400"
       }`}
     >
       {children}
@@ -155,14 +180,19 @@ interface MobileNavLinkProps extends NavLinkProps {
   onClick: () => void;
 }
 
-function MobileNavLink({ to, isActive, onClick, children }: MobileNavLinkProps) {
+function MobileNavLink({
+  to,
+  isActive,
+  onClick,
+  children,
+}: MobileNavLinkProps) {
   return (
     <Link
       to={to}
       className={`block py-2 px-4 font-medium rounded-lg transition-colors ${
         isActive
-          ? 'bg-gradient-to-r from-pink-500/20 to-purple-500/20 text-white'
-          : 'text-gray-300 hover:text-white'
+          ? "bg-gray-900/10 text-gray-600"
+          : "text-gray-900 hover:text-white"
       }`}
       onClick={onClick}
     >

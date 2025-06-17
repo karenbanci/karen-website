@@ -52,25 +52,25 @@ export default function Home() {
         }}
       >
         <motion.div
-          className="backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl"
+          className="backdrop-blur-sm bg-makara-50 p-8 rounded-2xl shadow-xl"
           variants={fadeIn}
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-copper-600"
             variants={fadeIn}
           >
             Karen Banci
           </motion.h1>
 
           <motion.h2
-            className="text-2xl md:text-3xl mb-8 text-gray-200"
+            className="text-2xl md:text-3xl mb-8 text-gray-500"
             variants={fadeIn}
           >
             Full Stack Developer
           </motion.h2>
 
           <motion.p
-            className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-300"
+            className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-600"
             variants={fadeIn}
           >
             I build dynamic web applications, blending design, and codeI.
