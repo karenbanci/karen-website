@@ -12,9 +12,9 @@ const projects = [
       "This is a project is focused on the design of an AI application that can predict and make decisions autonomously.",
     fullDescription:
       "Designed and implemented an advanced AI application in Python, a hands-on project from Foothill College, focused on autonomous prediction and decision-making. This highlights the creation of intelligent agents that can analyze data, foresee outcomes, and execute actions independently.",
-    tags: ["Python", "AI", "Machine Learning", "Neural Networking"],
-    image: "/images/neural-network1.webp",
-    additionalImages: ["/images/neural-network2.webp"],
+    tags: ["Python", "AI", "Machine Learning", "Neural Networking", "PyCharm"],
+    image: "/images/neural-network.mov",
+    additionalImages: ["/images/neural-network-result.png"],
     client: "Academic Project at Foothill College",
     duration: "12 weeks",
     role: "Computer Science",
@@ -140,7 +140,7 @@ const projects = [
     fullDescription:
       "This project involved creating a fully interactive 3D periodic table using React and Three.js. The table allows users to explore the properties of each element in a visually engaging way. The project was designed to be part of my portfolio and improve my skills in web development.",
     tags: ["Three.js", "WebGL", "React", "Blender"],
-    image: "/images/periodic-table-project.png",
+    image: "/images/periodic-table-project.mov",
     additionalImages: ["/images/periodic-table-project2.png"],
     shape: "sphere",
     color: "#FF0080",
@@ -158,7 +158,7 @@ const projects = [
     fullDescription:
       "This project is a part of learning course of Bruno Simon. The project was built using React Three Fiber, a React renderer for Three.js, allowing for a seamless integration of 3D graphics into the React ecosystem. It works just only desktop version. The game features a marble racing through a 3D course, with various obstacles and challenges. ",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-    image: "images/marble-race-game.png",
+    image: "/images/marble-race.mov",
     additionalImages: ["images/marble-race-finish.png"],
     shape: "box",
     color: "#7928CA",
@@ -176,8 +176,8 @@ const projects = [
     fullDescription:
       "Make Mario jump over a continuous series of green pipes that move from the right to the left of the screen. The game is controlled with a single action. The player can press any key on the keyboard or click the screen to make Mario jump. The score increases by one point for each pipe the player successfully jumps over. The game ends immediately if Mario collides with one of the pipes. A Game Over screen appears, and the final score is recorded.",
     tags: ["JavaScript", "CSS", "HTML", "Game"],
-    image: "images/mario-jump.png",
-    additionalImages: ["/images/mario-jump.mov"],
+    image: "/images/mario-jump.mov",
+    additionalImages: ["images/mario-jump.png"],
     shape: "box",
     color: "#7928CA",
     client: "Self Project",
