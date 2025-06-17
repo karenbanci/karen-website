@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-12 px-4 md:px-8 relative z-10 backdrop-blur-sm bg-black/10">
+    <footer className="py-12 px-4 md:px-8 relative z-10 backdrop-blur-lg bg-makara-50/10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
@@ -14,7 +14,7 @@ export default function Footer() {
             >
               KB
             </Link>
-            <p className="text-gray-400 mt-4 max-w-xs">
+            <p className="text-gray-600 mt-4 max-w-xs">
               Building innovative software solutions that merge functionality,
               and efficiency.
             </p>
@@ -47,12 +47,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-copper-900">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-white transition-colors"
                 >
                   Home
                 </Link>
@@ -60,7 +62,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/projects"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-white transition-colors"
                 >
                   Projects
                 </Link>
@@ -68,7 +70,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-white transition-colors"
                 >
                   About
                 </Link>
@@ -76,7 +78,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-white transition-colors"
                 >
                   Contact
                 </Link>
@@ -85,33 +87,37 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-copper-900">
+              Services
+            </h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-400">Software Development</span>
+                <span className="text-gray-600">Software Development</span>
               </li>
               <li>
-                <span className="text-gray-400">Interactive Experiences</span>
+                <span className="text-gray-600">Interactive Experiences</span>
               </li>
               <li>
-                <span className="text-gray-400">React Development</span>
+                <span className="text-gray-600">React Development</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4 text-copper-900">
+              Contact
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a
                   href="mailto:karenbanci1@gmail.com"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-white transition-colors"
                 >
                   karenbanci1@gmail.com
                 </a>
               </li>
               <li>
-                <span className="text-gray-400">Sunnyvale, CA</span>
+                <span className="text-gray-600">Sunnyvale, CA</span>
               </li>
             </ul>
           </div>
@@ -168,7 +174,7 @@ function SocialIcon({ href, ariaLabel, children }: SocialIconProps) {
     <a
       href={href}
       aria-label={ariaLabel}
-      className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-r from-pink-500 to-purple-500 transition-colors"
+      className="w-10 h-10 rounded-full bg-copper-400 flex items-center justify-center hover:bg-gradient-to-r from-copper-100 to-copper-900 transition-colors"
     >
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         {children}
@@ -182,7 +188,7 @@ function SocialIconAugmented({ href, ariaLabel, children }: SocialIconProps) {
     <a
       href={href}
       aria-label={ariaLabel}
-      className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-r from-pink-500 to-purple-500 transition-colors"
+      className="w-10 h-10 rounded-full bg-copper-400 flex items-center justify-center hover:bg-gradient-to-r from-copper-100 to-copper-900 transition-colors"
     >
       <svg
         className="w-5 h-5"

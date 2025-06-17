@@ -27,7 +27,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled || isMenuOpen ? "py-4 backdrop-blur-lg bg-black/10" : "py-6"
+        isScrolled || isMenuOpen
+          ? "py-4 backdrop-blur-lg bg-makara-50/10"
+          : "py-6"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
@@ -165,7 +167,7 @@ function NavLink({ to, isActive, children }: NavLinkProps) {
       {isActive && (
         <motion.div
           layoutId="activeIndicator"
-          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500"
+          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-copper-100 to-copper-600"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
