@@ -4,13 +4,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-12 px-4 md:px-8 relative z-10 backdrop-blur-lg bg-pesto-400/10">
+    <footer className="py-12 px-4 md:px-8 relative z-10 backdrop-blur-lg bg-secondary-400/10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
             <Link
               to="/"
-              className="text-2xl font-bold bg-clip-text text-copper-600 mb-4 inline-block"
+              className="text-2xl font-bold bg-clip-text text-primary-600 mb-4 inline-block"
             >
               KB
             </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-copper-900">
+            <h3 className="text-lg font-semibold mb-4 text-primary-900">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -87,7 +87,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-copper-900">
+            <h3 className="text-lg font-semibold mb-4 text-primary-900">
               Services
             </h3>
             <ul className="space-y-2">
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-copper-900">
+            <h3 className="text-lg font-semibold mb-4 text-primary-900">
               Contact
             </h3>
             <ul className="space-y-2">
@@ -174,7 +174,7 @@ function SocialIcon({ href, ariaLabel, children }: SocialIconProps) {
     <a
       href={href}
       aria-label={ariaLabel}
-      className="w-10 h-10 rounded-full bg-copper-400 flex items-center justify-center hover:bg-gradient-to-r from-copper-100 to-copper-900 transition-colors"
+      className="w-10 h-10 rounded-full bg-primary-400 flex items-center justify-center hover:bg-gradient-to-r from-primary-100 to-primary-900 transition-colors"
     >
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         {children}
@@ -188,7 +188,7 @@ function SocialIconAugmented({ href, ariaLabel, children }: SocialIconProps) {
     <a
       href={href}
       aria-label={ariaLabel}
-      className="w-10 h-10 rounded-full bg-copper-400 flex items-center justify-center hover:bg-gradient-to-r from-copper-100 to-copper-900 transition-colors"
+      className="w-10 h-10 rounded-full bg-primary-400 flex items-center justify-center hover:bg-gradient-to-r from-primary-100 to-primary-900 transition-colors"
     >
       <svg
         className="w-5 h-5"
