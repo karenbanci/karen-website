@@ -56,7 +56,7 @@ export default function Home() {
           variants={fadeIn}
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-copper-600"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-primary-600"
             variants={fadeIn}
           >
             Karen Banci
@@ -86,15 +86,15 @@ export default function Home() {
           >
             <Link
               to="/projects"
-              className="px-8 py-3 rounded-full bg-copper-600 text-white font-medium
-            hover:shadow-lg hover:text-gray-600 hover:bg-copper-100 hover:shadow-copper-900 transition-all duration-300"
+              className="px-8 py-3 rounded-full bg-primary-600 text-white font-medium
+            hover:shadow-lg hover:text-gray-600 hover:bg-primary-100 hover:shadow-primary-900 transition-all duration-300"
             >
               View Projects
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-3 rounded-full border border-copper-900 text-copper-900 font-medium
-            hover:border-copper-600 hover:text-copper-600 transition-all duration-300"
+              className="px-8 py-3 rounded-full border border-primary-900 text-primary-900 font-medium
+            hover:border-primary-600 hover:text-primary-600 transition-all duration-300"
             >
               Contact Me
             </Link>

@@ -28,8 +28,8 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen
-          ? "py-4 backdrop-blur-lg bg-pesto-400/10"
-          : "py-6 bg-pesto-200/10"
+          ? "py-4 backdrop-blur-lg bg-secondary-400/10"
+          : "py-6 bg-secondary-200/10"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
@@ -37,7 +37,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-bold bg-clip-text text-copper-600"
+            className="text-2xl font-bold bg-clip-text text-primary-600"
           >
             KarenHB
           </Link>
@@ -160,14 +160,16 @@ function NavLink({ to, isActive, children }: NavLinkProps) {
     <Link
       to={to}
       className={`relative font-medium transition-colors text-lg ${
-        isActive ? "text-copper-600" : "text-copper-900 hover:text-copper-400"
+        isActive
+          ? "text-primary-600"
+          : "text-primary-900 hover:text-primary-400"
       }`}
     >
       {children}
       {isActive && (
         <motion.div
           layoutId="activeIndicator"
-          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-copper-100 to-copper-600"
+          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-100 to-primary-600"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
