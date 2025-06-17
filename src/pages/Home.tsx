@@ -52,7 +52,7 @@ export default function Home() {
         }}
       >
         <motion.div
-          className="backdrop-blur-sm bg-makara-50 p-8 rounded-2xl shadow-xl"
+          className="backdrop-blur-sm bg-makara-50/10 p-8 rounded-2xl shadow-xl"
           variants={fadeIn}
         >
           <motion.h1
@@ -86,15 +86,15 @@ export default function Home() {
           >
             <Link
               to="/projects"
-              className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
-            hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300"
+              className="px-8 py-3 rounded-full bg-copper-600 text-white font-medium
+            hover:shadow-lg hover:text-gray-600 hover:bg-copper-100 hover:shadow-copper-900 transition-all duration-300"
             >
               View Projects
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-3 rounded-full border border-gray-500 text-white font-medium
-            hover:border-pink-500 hover:text-pink-500 transition-all duration-300"
+              className="px-8 py-3 rounded-full border border-copper-900 text-copper-900 font-medium
+            hover:border-copper-600 hover:text-copper-600 transition-all duration-300"
             >
               Contact Me
             </Link>
