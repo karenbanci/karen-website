@@ -8,8 +8,8 @@ const projects = [
     title: "Neural Network",
     description:
       "This is a project is focused on the design of an AI application that can predict and make decisions autonomously. ",
-    tags: ["Python", "AI", "Machine Learning", "Neural Networking"],
-    image: "/images/neural-network1.webp",
+    tags: ["Python", "AI", "Machine Learning", "Neural Networking", "PyCharm"],
+    image: "/images/neural-network1.png",
   },
   {
     id: 2,
@@ -60,7 +60,7 @@ const projects = [
     description:
       "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
     tags: ["Three.js", "WebGL", "React", "Blender"],
-    image: "/images/periodic-table-project.png",
+    image: "/images/periodic-table-project.mov",
   },
   {
     id: 8,
@@ -68,8 +68,7 @@ const projects = [
     description:
       "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-    image:
-      "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/marble-race-game.png",
+    image: "/images/marble-race.mov",
   },
   {
     id: 9,
