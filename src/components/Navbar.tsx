@@ -39,7 +39,7 @@ export default function Navbar() {
             to="/"
             className="text-2xl font-bold bg-clip-text text-primary-600"
           >
-            KarenHB
+            <img src="/images/karen-logo.svg" alt="logo" className="w-14" />
           </Link>
 
           {/* Desktop Navigation */}

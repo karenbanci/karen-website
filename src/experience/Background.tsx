@@ -16,7 +16,7 @@ export default function Background({
   count = 5000,
   size = 0.015,
   radius = 5,
-  colors = ["#756E3E", "#10282F"],
+  colors = ["#10282F", "#10282F"],
   speed = 0.2,
 }: BackgroundProps) {
   const points = useRef<THREE.Points>(null);

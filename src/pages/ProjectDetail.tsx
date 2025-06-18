@@ -254,7 +254,7 @@ export default function ProjectDetail() {
       <div className="container mx-auto max-w-6xl">
         <Link
           to="/projects"
-          className="inline-flex items-center text-gray-300 hover:text-white mb-8 transition-colors"
+          className="inline-flex items-center text-primary-900 hover:text-white mb-8 transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -287,7 +287,7 @@ export default function ProjectDetail() {
             {project.tags.map((tag: string, index: number) => (
               <span
                 key={index}
-                className="text-sm px-3 py-1 rounded-full bg-gray-800 text-gray-300"
+                className="text-sm px-3 py-1 rounded-full bg-secondary-400 text-accent-800"
               >
                 {tag}
               </span>
@@ -412,40 +412,42 @@ export default function ProjectDetail() {
               )}
             </div>
 
-            <div className="backdrop-blur-sm bg-gray-900/30 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-700">
+            <div className="backdrop-blur-sm bg-makara-50/30 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-700 text-primary-900">
                 Project Details
               </h3>
 
               <div className="space-y-4">
                 <div>
-                  <p className="text-gray-400 text-sm mb-1">Client</p>
-                  <p>{project.client}</p>
+                  <p className="text-primary-600 text-sm mb-1">Client</p>
+                  <p className="text-primary-400 ">{project.client}</p>
                 </div>
 
                 <div>
-                  <p className="text-gray-400 text-sm mb-1">Year</p>
-                  <p>{project.year}</p>
+                  <p className="text-primary-600 text-sm mb-1">Year</p>
+                  <p className="text-primary-400 ">{project.year}</p>
                 </div>
 
                 <div>
-                  <p className="text-gray-400 text-sm mb-1">Duration</p>
-                  <p>{project.duration}</p>
+                  <p className="text-primary-600 text-sm mb-1">Duration</p>
+                  <p className="text-primary-400 ">{project.duration}</p>
                 </div>
 
                 <div>
-                  <p className="text-gray-400 text-sm mb-1">Role</p>
-                  <p>{project.role}</p>
+                  <p className="text-primary-600 text-sm mb-1">Role</p>
+                  <p className="text-primary-400 ">{project.role}</p>
                 </div>
 
                 {project.link && (
                   <div>
-                    <p className="text-gray-400 text-sm mb-1">Live Preview</p>
+                    <p className="text-primary-600 text-sm mb-1">
+                      Live Preview
+                    </p>
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-pink-500 hover:text-pink-400 flex items-center"
+                      className="text-secondary-800 hover:text-secondary-600 flex items-center"
                     >
                       Visit Site
                       <svg
@@ -468,8 +470,10 @@ export default function ProjectDetail() {
           </motion.div>
 
           <motion.div variants={fadeIn} className="mb-16">
-            <h2 className="text-2xl font-bold mb-6">About this project</h2>
-            <div className="text-gray-300 space-y-4">
+            <h2 className="text-2xl font-bold mb-6 text-primary-900">
+              About this project
+            </h2>
+            <div className="text-gray-600 space-y-4">
               <p>{project.fullDescription}</p>
             </div>
           </motion.div>
@@ -482,7 +486,7 @@ export default function ProjectDetail() {
               to={`/project/${
                 project.id > 1 ? project.id - 1 : projects.length
               }`}
-              className="px-6 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors flex items-center"
+              className="px-6 py-3 bg-primary-600 rounded-lg hover:bg-primary-100 transition-colors flex items-center text-white hover:text-gray-600 "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -503,7 +507,7 @@ export default function ProjectDetail() {
               to={`/project/${
                 project.id < projects.length ? project.id + 1 : 1
               }`}
-              className="px-6 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors flex items-center"
+              className="px-6 py-3 bg-primary-600 rounded-lg hover:bg-primary-100 transition-colors flex items-center text-white hover:text-gray-600 "
             >
               Next Project
               <svg
