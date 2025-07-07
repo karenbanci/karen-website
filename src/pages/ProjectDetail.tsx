@@ -447,7 +447,7 @@ export default function ProjectDetail() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary-400 hover:text-background-light flex items-center my-5 px-3 py-1 rounded-full border border-primary-400 w-auto"
+                      className="text-primary-400 hover:text-background-light flex items-center my-5 px-3 py-1 rounded-full border border-primary-400 w-[8rem]"
                     >
                       Visit Site
                       <svg
@@ -486,7 +486,7 @@ export default function ProjectDetail() {
               to={`/project/${
                 project.id > 1 ? project.id - 1 : projects.length
               }`}
-              className="px-6 py-3 bg-primary-600 rounded-lg  transition-colors flex items-center text-primary-100 "
+              className="px-6 py-3 flex items-center text-primary-100 rounded-full bg-primary-500 text-white font-medium hover:shadow-lg hover:text-primary-500  hover:bg-background-light hover:shadow-primary-100 transition-all duration-300 inline-block w-[13rem]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -507,7 +507,7 @@ export default function ProjectDetail() {
               to={`/project/${
                 project.id < projects.length ? project.id + 1 : 1
               }`}
-              className="px-6 py-3 bg-primary-600 rounded-lg  transition-colors flex items-center text-primary-100 "
+              className="px-6 py-3 flex items-center text-primary-100 rounded-full bg-primary-500 text-white font-medium hover:shadow-lg hover:text-primary-500  hover:bg-background-light hover:shadow-primary-100 transition-all duration-300 inline-block w-[11rem]"
             >
               Next Project
               <svg
