@@ -87,13 +87,13 @@ export default function Home() {
             <Link
               to="/projects"
               className="px-8 py-3 rounded-full bg-primary-600 text-white font-medium
-            hover:shadow-lg hover:text-gray-600 hover:bg-primary-100 hover:shadow-primary-900 transition-all duration-300"
+            hover:shadow-lg hover:text-gray-600 hover:bg-primary-100 hover:shadow-primary-400 transition-all duration-300"
             >
               View Projects
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-3 rounded-full border border-primary-900 text-primary-900 font-medium
+              className="px-8 py-3 rounded-full border border-primary-400 text-primary-400 font-medium
             hover:border-primary-600 hover:text-primary-600 transition-all duration-300"
             >
               Contact Me
