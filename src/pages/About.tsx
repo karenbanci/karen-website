@@ -87,7 +87,7 @@ const SkillBar = ({ name, level }: { name: string; level: number }) => (
     </div>
     <div className="w-full bg-gray-800 rounded-full h-2">
       <motion.div
-        className="h-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500"
+        className="h-2 rounded-full bg-gradient-to-r from-primary-500 to-white"
         initial={{ width: 0 }}
         animate={{ width: `${level}%` }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
@@ -110,7 +110,7 @@ const Experience = ({
   link: string;
 }) => (
   <motion.div
-    className="mb-8 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-pink-500 before:rounded-full before:z-10 after:content-[''] after:absolute after:left-1.5 after:top-10 after:bottom-0 after:w-[1px] after:bg-gray-700 after:z-0 last:after:hidden"
+    className="mb-8 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary-500 before:rounded-full before:z-10 after:content-[''] after:absolute after:left-1.5 after:top-10 after:bottom-0 after:w-[1px] after:bg-gray-700 after:z-0 last:after:hidden"
     variants={fadeIn}
   >
     <h3 className="text-xl font-bold">{role}</h3>
@@ -137,7 +137,7 @@ export default function About() {
           className="mb-16 text-center"
         >
           <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-bold mb-6 text-primary-500 mt-10"
             variants={fadeIn}
           >
             About Me
@@ -162,7 +162,7 @@ export default function About() {
               variants={staggerContainer}
             >
               <motion.h2
-                className="text-2xl font-bold mb-6 pb-2 border-b border-gray-800"
+                className="text-2xl font-bold mb-6 pb-2 border-b border-gray-800 text-primary-500"
                 variants={fadeIn}
               >
                 My Story
@@ -192,7 +192,7 @@ export default function About() {
               </motion.div>
 
               <motion.h2
-                className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
+                className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800 text-primary-500"
                 variants={fadeIn}
               >
                 Skills
@@ -212,7 +212,7 @@ export default function About() {
               </motion.div>
 
               <motion.h2
-                className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800"
+                className="text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-800 text-primary-500"
                 variants={fadeIn}
               >
                 Education
@@ -220,7 +220,7 @@ export default function About() {
 
               <motion.div variants={fadeIn}>
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl font-bold text-primary-100">
                     Associate's Degree, Computer Science
                   </h3>
                   <div className="text-gray-300 text-sm mb-2">
@@ -237,7 +237,7 @@ export default function About() {
                 </div>
 
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl font-bold text-primary-100">
                     Bootcamp, Full Stack Web Developer - Batch #766
                   </h3>
                   <div className="text-gray-300 text-sm mb-2">
@@ -252,7 +252,7 @@ export default function About() {
                 </div>
 
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl font-bold text-primary-100">
                     Bachelor's Degree, Chemistry
                   </h3>
                   <div className="text-gray-300 text-sm mb-2">
@@ -278,14 +278,14 @@ export default function About() {
               variants={staggerContainer}
             >
               <motion.h2
-                className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800"
+                className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800 text-primary-500"
                 variants={fadeIn}
               >
                 Experience
               </motion.h2>
 
               <motion.div
-                className="space-y-4"
+                className="space-y-4 text-primary-100"
                 variants={staggerContainer}
                 initial="hidden"
                 animate="visible"
