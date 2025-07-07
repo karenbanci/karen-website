@@ -287,7 +287,7 @@ export default function ProjectDetail() {
             {project.tags.map((tag: string, index: number) => (
               <span
                 key={index}
-                className="text-sm px-3 py-1 rounded-full bg-secondary-300 text-accent-800"
+                className="text-sm px-3 py-1 rounded-full bg-secondary-300 text-secondary-400"
               >
                 {tag}
               </span>
