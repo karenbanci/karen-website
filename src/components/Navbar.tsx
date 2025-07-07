@@ -199,8 +199,8 @@ function MobileNavLink({
       to={to}
       className={`block py-2 px-4 font-medium rounded-lg transition-colors ${
         isActive
-          ? "bg-gray-900/50 text-gray-900"
-          : "text-gray-900 hover:text-white"
+          ? "bg-gray-200/50 text-gray-200"
+          : "text-gray-200 hover:text-white"
       }`}
       onClick={onClick}
     >
