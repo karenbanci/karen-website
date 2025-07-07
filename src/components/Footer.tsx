@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-12 px-4 md:px-8 relative z-10 backdrop-blur-lg bg-secondary-300/10">
+    <footer className="py-12 px-4 md:px-8 relative z-10 backdrop-blur-lg bg-background-dark/10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
@@ -12,7 +12,11 @@ export default function Footer() {
               to="/"
               className="text-2xl font-bold bg-clip-text text-primary-600 mb-4 inline-block"
             >
-              KB
+              <img
+                src="/images/karen-logo-yellow.svg"
+                alt="logo"
+                className="w-14"
+              />
             </Link>
             <p className="text-gray-600 mt-4 max-w-xs">
               Building innovative software solutions that merge functionality,
@@ -174,7 +178,7 @@ function SocialIcon({ href, ariaLabel, children }: SocialIconProps) {
     <a
       href={href}
       aria-label={ariaLabel}
-      className="w-10 h-10 rounded-full bg-primary-300 flex items-center justify-center hover:bg-gradient-to-r from-primary-100 to-primary-400 transition-colors"
+      className="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center hover:bg-gradient-to-r from-primary-100 to-primary-400 transition-colors"
     >
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         {children}
@@ -188,7 +192,7 @@ function SocialIconAugmented({ href, ariaLabel, children }: SocialIconProps) {
     <a
       href={href}
       aria-label={ariaLabel}
-      className="w-10 h-10 rounded-full bg-primary-300 flex items-center justify-center hover:bg-gradient-to-r from-primary-100 to-primary-400 transition-colors"
+      className="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center hover:bg-gradient-to-r from-primary-100 to-primary-400 transition-colors"
     >
       <svg
         className="w-5 h-5"
