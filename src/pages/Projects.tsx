@@ -64,7 +64,7 @@ const projects = [
   },
   {
     id: 8,
-    title: "Marble Race - Game React Three FIber",
+    title: "Marble Race - Game React Three Fiber",
     description:
       "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
@@ -99,7 +99,7 @@ const staggerContainer = {
 const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   return (
     <motion.div
-      className="bg-secondary-400/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-pink-500/10 transition-all duration-300"
+      className="bg-primary-500 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-pink-500/10 transition-all duration-300"
       variants={fadeIn}
       whileHover={{ y: -10, transition: { duration: 0.2 } }}
     >
@@ -121,7 +121,8 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+              className="w-full h-full object-cover transform border-8 border-primary-500 rounded-lg
+              hover:scale-110 transition-transform duration-500"
             />
           )}
           <div className="absolute top-0 right-0 p-3">
@@ -133,16 +134,18 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
       </Link>
 
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-primary-400">
+        <h3 className="text-xl font-bold mb-5 text-background-dark ">
           {project.title}
         </h3>
-        <p className="text-gray-600 mb-4 text-sm">{project.description}</p>
+        <p className="text-background-dark mb-4 text-sm">
+          {project.description}
+        </p>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag: string, i: number) => (
             <span
               key={i}
-              className="text-xs px-2 py-1 rounded-full bg-primary-300/50 text-primary-400"
+              className="text-xs px-2 py-1 rounded-full bg-background-dark/50 text-primary-400"
             >
               {tag}
             </span>
@@ -151,7 +154,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
 
         <Link
           to={`/project/${project.id}`}
-          className="inline-block text-sm font-medium text-primary-600 hover:text-secondary-400 transition-colors"
+          className="inline-block text-sm font-medium text-background-dark hover:text-primary-400 transition-colors"
         >
           View Details →
         </Link>
@@ -178,7 +181,7 @@ export default function Projects() {
             My Projects
           </motion.h1>
           <motion.p
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-background-light max-w-3xl mx-auto"
             variants={fadeIn}
           >
             Explore my portfolio of creative development work, from interactive
