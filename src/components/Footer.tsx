@@ -18,7 +18,7 @@ export default function Footer() {
                 className="w-14"
               />
             </Link>
-            <p className="text-gray-600 mt-4 max-w-xs">
+            <p className="text-gray-400 mt-4 max-w-xs">
               Building innovative software solutions that merge functionality,
               and efficiency.
             </p>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-600 hover:text-white transition-colors"
+                  className="text-gray-400  hover:text-white transition-colors"
                 >
                   Home
                 </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/projects"
-                  className="text-gray-600 hover:text-white transition-colors"
+                  className="text-gray-400  hover:text-white transition-colors"
                 >
                   Projects
                 </Link>
@@ -74,7 +74,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-600 hover:text-white transition-colors"
+                  className="text-gray-400  hover:text-white transition-colors"
                 >
                   About
                 </Link>
@@ -82,7 +82,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-600 hover:text-white transition-colors"
+                  className="text-gray-400  hover:text-white transition-colors"
                 >
                   Contact
                 </Link>
@@ -96,13 +96,13 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-600">Software Development</span>
+                <span className="text-gray-400 ">Software Development</span>
               </li>
               <li>
-                <span className="text-gray-600">Interactive Experiences</span>
+                <span className="text-gray-400 ">Interactive Experiences</span>
               </li>
               <li>
-                <span className="text-gray-600">React Development</span>
+                <span className="text-gray-400 ">React Development</span>
               </li>
             </ul>
           </div>
@@ -115,13 +115,13 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:karenbanci1@gmail.com"
-                  className="text-gray-600 hover:text-white transition-colors"
+                  className="text-gray-400  hover:text-white transition-colors"
                 >
                   karenbanci1@gmail.com
                 </a>
               </li>
               <li>
-                <span className="text-gray-600">Sunnyvale, CA</span>
+                <span className="text-gray-400 ">Sunnyvale, CA</span>
               </li>
             </ul>
           </div>
