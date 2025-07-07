@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import Airtable from 'airtable';
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Airtable from "airtable";
 
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
@@ -9,10 +9,9 @@ Airtable.configure({
 
 const base = Airtable.base(process.env.REACT_APP_AIRTABLE_BASE_ID || "");
 
-
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const staggerContainer = {
@@ -21,20 +20,20 @@ const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
+      delayChildren: 0.2,
+    },
+  },
 };
 
 export default function Contact() {
   // const { addShape, clearShapes } = useScene();
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
     submitted: false,
     submitting: false,
-    error: ''
+    error: "",
   });
 
   // useEffect(() => {
@@ -62,47 +61,53 @@ export default function Contact() {
   //   // No need to return cleanup function as shapes will persist
   // }, [addShape, clearShapes]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-const handleSubmit = (e: React.FormEvent) => {
-  console.log('Form submitted:', formState);
-  e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
+    console.log("Form submitted:", formState);
+    e.preventDefault();
 
-  setFormState({ ...formState, submitting: true });
+    setFormState({ ...formState, submitting: true });
 
-  base('Contact').create(
-    [
-      {
-        fields: {
-          Name: formState.name,
-          Email: formState.email,
-          Message: formState.message
+    base("Contact").create(
+      [
+        {
+          fields: {
+            Name: formState.name,
+            Email: formState.email,
+            Message: formState.message,
+          },
+        },
+      ],
+      function (err, records) {
+        if (err) {
+          console.error(err);
+          setFormState({
+            ...formState,
+            submitting: false,
+            error: "Submission failed.",
+          });
+          return;
         }
-      }
-    ],
-    function (err, records) {
-      if (err) {
-        console.error(err);
-        setFormState({ ...formState, submitting: false, error: 'Submission failed.' });
-        return;
-      }
 
-      setFormState({
-        name: '',
-        email: '',
-        message: '',
-        submitted: true,
-        submitting: false,
-        error: ''
-      });
-    }
-  );
-};
+        setFormState({
+          name: "",
+          email: "",
+          message: "",
+          submitted: true,
+          submitting: false,
+          error: "",
+        });
+      }
+    );
+  };
 
   return (
     <div className="min-h-screen py-20 px-4 md:px-8">
@@ -115,7 +120,7 @@ const handleSubmit = (e: React.FormEvent) => {
           className="mb-12 text-center"
         >
           <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-bold mb-6 text-primary-500 my-10"
             variants={fadeIn}
           >
             Get In Touch
@@ -124,7 +129,8 @@ const handleSubmit = (e: React.FormEvent) => {
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeIn}
           >
-            I'm always open to new projects and collaborations. Feel free to reach out!
+            I'm always open to new projects and collaborations. Feel free to
+            reach out!
           </motion.p>
         </motion.div>
 
@@ -142,7 +148,10 @@ const handleSubmit = (e: React.FormEvent) => {
               {!formState.submitted ? (
                 <form onSubmit={handleSubmit}>
                   <div className="mb-6">
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2 text-primary-500"
+                    >
                       Your Name
                     </label>
                     <input
@@ -152,13 +161,16 @@ const handleSubmit = (e: React.FormEvent) => {
                       value={formState.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                       placeholder="Name"
                     />
                   </div>
 
                   <div className="mb-6">
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2 text-primary-500"
+                    >
                       Email Address
                     </label>
                     <input
@@ -168,13 +180,16 @@ const handleSubmit = (e: React.FormEvent) => {
                       value={formState.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                       placeholder="example@example.com"
                     />
                   </div>
 
                   <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium mb-2 text-primary-500"
+                    >
                       Your Message
                     </label>
                     <textarea
@@ -184,7 +199,7 @@ const handleSubmit = (e: React.FormEvent) => {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                       placeholder="Tell me about your project..."
                     />
                   </div>
@@ -192,23 +207,43 @@ const handleSubmit = (e: React.FormEvent) => {
                   <button
                     type="submit"
                     disabled={formState.submitting}
-                    className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium
-                    hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300 disabled:opacity-70"
+                    className="w-full px-6 py-3 rounded-lg  bg-primary-500 text-white font-medium
+                    hover:shadow-lg hover:shadow-primary-100/30 transition-all duration-300 disabled:opacity-70"
                   >
                     {formState.submitting ? "Sending..." : "Send Message"}
                   </button>
                 </form>
               ) : (
                 <div className="text-center py-8">
-                  <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-16 h-16 text-green-500 mx-auto mb-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                   <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
                   <p className="text-gray-300">
-                    Thanks for reaching out. I'll get back to you as soon as possible.
+                    Thanks for reaching out. I'll get back to you as soon as
+                    possible.
                   </p>
                   <button
-                    onClick={() => setFormState({name: '', email: '', message: '', submitted: false, submitting: false, error: ''})}
+                    onClick={() =>
+                      setFormState({
+                        name: "",
+                        email: "",
+                        message: "",
+                        submitted: false,
+                        submitting: false,
+                        error: "",
+                      })
+                    }
                     className="mt-6 px-6 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
                   >
                     Send Another Message
@@ -225,16 +260,28 @@ const handleSubmit = (e: React.FormEvent) => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeIn} className="mb-8">
-              <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
+              <h2 className="text-2xl font-bold mb-4 text-primary-500">
+                Contact Information
+              </h2>
               <p className="text-gray-300 mb-6">
                 Feel free to reach out through any of these channels:
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-pink-500/20 flex items-center justify-center mr-4">
-                    <svg className="w-5 h-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <div className="w-10 h-10 rounded-full bg-primary-500/20 flex items-center justify-center mr-4">
+                    <svg
+                      className="w-5 h-5 text-primary-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -256,10 +303,25 @@ const handleSubmit = (e: React.FormEvent) => {
                 </div> */}
 
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mr-4">
-                    <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <div className="w-10 h-10 rounded-full bg-primary-500/20 flex items-center justify-center mr-4">
+                    <svg
+                      className="w-5 h-5 text-primary-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -271,26 +333,61 @@ const handleSubmit = (e: React.FormEvent) => {
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <h2 className="text-2xl font-bold mb-4">Social Media</h2>
+              <h2 className="text-2xl font-bold mb-4 text-primary-500">
+                Social Media
+              </h2>
               <div className="flex space-x-4">
-                <a href="https://www.linkedin.com/in/karenchb/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-500 transition-colors" >
-                  <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+                <a
+                  href="https://www.linkedin.com/in/karenchb/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-500 transition-colors"
+                >
+                  <svg
+                    className="w-7 h-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
                   </svg>
                 </a>
-                <a href="https://x.com/bkakis1?s=21&t=cKnffPWbH75RQXdGkWpQPg" className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-500 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-twitter-x" viewBox="0 0 16 16">
-                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                <a
+                  href="https://x.com/bkakis1?s=21&t=cKnffPWbH75RQXdGkWpQPg"
+                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="bi bi-twitter-x"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/kakabanci/" className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500 transition-colors">
-                  <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <a
+                  href="https://www.instagram.com/kakabanci/"
+                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500 transition-colors"
+                >
+                  <svg
+                    className="w-7 h-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </a>
-                <a href="https://github.com/karenbanci" className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-black transition-colors">
-                  <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                <a
+                  href="https://github.com/karenbanci"
+                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-black transition-colors"
+                >
+                  <svg
+                    className="w-7 h-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                   </svg>
                 </a>
               </div>
