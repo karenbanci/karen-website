@@ -199,7 +199,7 @@ function MobileNavLink({
       to={to}
       className={`block py-2 px-4 font-medium rounded-lg transition-colors ${
         isActive
-          ? "bg-gray-900/10 text-gray-600"
+          ? "bg-gray-900/50 text-gray-900"
           : "text-gray-900 hover:text-white"
       }`}
       onClick={onClick}

@@ -63,7 +63,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.h2
-            className="text-2xl md:text-3xl mb-8 text-primary-100"
+            className="text-2xl md:text-3xl mb-8 text-primary-100/90 font-semibold"
             variants={fadeIn}
           >
             Full Stack Developer
