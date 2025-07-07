@@ -28,7 +28,7 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen
-          ? "py-4 backdrop-blur-lg bg-secondary-400/10"
+          ? "py-4 backdrop-blur-lg bg-secondary-300/10"
           : "py-6 bg-secondary-200/10"
       }`}
     >
@@ -162,7 +162,7 @@ function NavLink({ to, isActive, children }: NavLinkProps) {
       className={`relative font-medium transition-colors text-lg ${
         isActive
           ? "text-primary-600"
-          : "text-primary-900 hover:text-primary-400"
+          : "text-primary-400 hover:text-primary-300"
       }`}
     >
       {children}

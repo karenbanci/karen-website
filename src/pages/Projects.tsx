@@ -99,13 +99,13 @@ const staggerContainer = {
 const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   return (
     <motion.div
-      className="bg-secondary-600/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-pink-500/10 transition-all duration-300"
+      className="bg-secondary-400/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-pink-500/10 transition-all duration-300"
       variants={fadeIn}
       whileHover={{ y: -10, transition: { duration: 0.2 } }}
     >
       <Link
         to={`/project/${project.id}`}
-        className="inline-block text-sm font-medium text-primary-900 hover:text-primary-600 transition-colors w-full"
+        className="inline-block text-sm font-medium text-primary-400 hover:text-primary-600 transition-colors w-full"
       >
         <div className="relative h-48 overflow-hidden">
           {/\.(mp4|webm|ogg|mov)$/i.test(project.image) ? (
@@ -133,7 +133,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
       </Link>
 
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-primary-900">
+        <h3 className="text-xl font-bold mb-2 text-primary-400">
           {project.title}
         </h3>
         <p className="text-gray-600 mb-4 text-sm">{project.description}</p>
@@ -142,7 +142,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
           {project.tags.map((tag: string, i: number) => (
             <span
               key={i}
-              className="text-xs px-2 py-1 rounded-full bg-primary-400/50 text-primary-900"
+              className="text-xs px-2 py-1 rounded-full bg-primary-300/50 text-primary-400"
             >
               {tag}
             </span>
@@ -151,7 +151,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
 
         <Link
           to={`/project/${project.id}`}
-          className="inline-block text-sm font-medium text-primary-600 hover:text-secondary-800 transition-colors"
+          className="inline-block text-sm font-medium text-primary-600 hover:text-secondary-400 transition-colors"
         >
           View Details →
         </Link>
@@ -172,7 +172,7 @@ export default function Projects() {
           className="mb-16 text-center"
         >
           <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-6 mt-20 text-primary-900"
+            className="text-4xl md:text-5xl font-bold mb-6 mt-20 text-primary-400"
             variants={fadeIn}
           >
             My Projects

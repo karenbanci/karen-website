@@ -254,7 +254,7 @@ export default function ProjectDetail() {
       <div className="container mx-auto max-w-6xl">
         <Link
           to="/projects"
-          className="inline-flex items-center text-primary-900 hover:text-white mb-8 transition-colors"
+          className="inline-flex items-center text-primary-400 hover:text-white mb-8 transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -287,7 +287,7 @@ export default function ProjectDetail() {
             {project.tags.map((tag: string, index: number) => (
               <span
                 key={index}
-                className="text-sm px-3 py-1 rounded-full bg-secondary-400 text-accent-800"
+                className="text-sm px-3 py-1 rounded-full bg-secondary-300 text-accent-800"
               >
                 {tag}
               </span>
@@ -413,29 +413,29 @@ export default function ProjectDetail() {
             </div>
 
             <div className="backdrop-blur-sm bg-makara-50/30 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-700 text-primary-900">
+              <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-700 text-primary-400">
                 Project Details
               </h3>
 
               <div className="space-y-4">
                 <div>
                   <p className="text-primary-600 text-sm mb-1">Client</p>
-                  <p className="text-primary-400 ">{project.client}</p>
+                  <p className="text-primary-300 ">{project.client}</p>
                 </div>
 
                 <div>
                   <p className="text-primary-600 text-sm mb-1">Year</p>
-                  <p className="text-primary-400 ">{project.year}</p>
+                  <p className="text-primary-300 ">{project.year}</p>
                 </div>
 
                 <div>
                   <p className="text-primary-600 text-sm mb-1">Duration</p>
-                  <p className="text-primary-400 ">{project.duration}</p>
+                  <p className="text-primary-300 ">{project.duration}</p>
                 </div>
 
                 <div>
                   <p className="text-primary-600 text-sm mb-1">Role</p>
-                  <p className="text-primary-400 ">{project.role}</p>
+                  <p className="text-primary-300 ">{project.role}</p>
                 </div>
 
                 {project.link && (
@@ -447,7 +447,7 @@ export default function ProjectDetail() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-secondary-800 hover:text-secondary-600 flex items-center"
+                      className="text-secondary-400 hover:text-secondary-400 flex items-center"
                     >
                       Visit Site
                       <svg
@@ -470,7 +470,7 @@ export default function ProjectDetail() {
           </motion.div>
 
           <motion.div variants={fadeIn} className="mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-primary-900">
+            <h2 className="text-2xl font-bold mb-6 text-primary-400">
               About this project
             </h2>
             <div className="text-gray-600 space-y-4">
