@@ -28,7 +28,7 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen
-          ? "py-4 backdrop-blur-lg bg-secondary-300/10"
+          ? "py-4 backdrop-blur-lg bg-background-dark/10"
           : "py-6 background-dark"
       }`}
     >
@@ -37,10 +37,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-bold bg-clip-text text-accent-100"
+            className="text-2xl font-bold bg-clip-text text-primary-100"
           >
             <img
-              src="/images/karen-logo-purple.svg"
+              src="/images/karen-logo-yellow.svg"
               alt="logo"
               className="w-14"
             />
@@ -165,15 +165,15 @@ function NavLink({ to, isActive, children }: NavLinkProps) {
       to={to}
       className={`relative font-medium transition-colors text-lg ${
         isActive
-          ? "text-accent-100"
-          : "text-secondary-300 hover:text-primary-300"
+          ? "text-primary-100"
+          : "text-primary-500 hover:text-primary-200"
       }`}
     >
       {children}
       {isActive && (
         <motion.div
           layoutId="activeIndicator"
-          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-100 to-accent-100"
+          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-100 to-primary-100"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}

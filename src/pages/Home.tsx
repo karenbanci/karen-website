@@ -56,21 +56,21 @@ export default function Home() {
           variants={fadeIn}
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-primary-600"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-primary-500"
             variants={fadeIn}
           >
             Karen Banci
           </motion.h1>
 
           <motion.h2
-            className="text-2xl md:text-3xl mb-8 text-gray-500"
+            className="text-2xl md:text-3xl mb-8 text-primary-100"
             variants={fadeIn}
           >
             Full Stack Developer
           </motion.h2>
 
           <motion.p
-            className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-600"
+            className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-background-light "
             variants={fadeIn}
           >
             I build dynamic web applications, blending design, and codeI.
@@ -86,15 +86,15 @@ export default function Home() {
           >
             <Link
               to="/projects"
-              className="px-8 py-3 rounded-full bg-primary-600 text-white font-medium
-            hover:shadow-lg hover:text-gray-600 hover:bg-primary-100 hover:shadow-primary-400 transition-all duration-300"
+              className="px-8 py-3 rounded-full bg-primary-500 text-white font-medium
+            hover:shadow-lg hover:text-primary-500  hover:bg-background-light hover:shadow-primary-100 transition-all duration-300"
             >
               View Projects
             </Link>
             <Link
               to="/contact"
               className="px-8 py-3 rounded-full border border-primary-400 text-primary-400 font-medium
-            hover:border-primary-600 hover:text-primary-600 transition-all duration-300"
+             hover:bg-primary-500 hover:text-background-light hover:shadow-primary-100 transition-all duration-300"
             >
               Contact Me
             </Link>

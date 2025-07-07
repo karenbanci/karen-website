@@ -5,14 +5,15 @@ module.exports = {
     extend: {
       colors: {
         background: {
-          dark: "#202023",
+          dark: "#0A091A",
           light: "#F5F5F5",
         },
         primary: {
-          100: "#39B0A3",
-          200: "#39B0A3",
-          300: "#1D9C8F",
-          400: "#078477",
+          100: "#FFF4A3",
+          200: "#FFEE76",
+          300: "#FFEA53",
+          400: "#FBE22F",
+          500: "#F5AF33",
         },
         secondary: {
           100: "#E391E3",
@@ -21,10 +22,10 @@ module.exports = {
           400: "#8A078A",
         },
         accent: {
-          100: "#FFF4A3",
-          200: "#FFEE76",
-          300: "#FFEA53",
-          400: "#FBE22F",
+          100: "#39B0A3",
+          200: "#39B0A3",
+          300: "#1D9C8F",
+          400: "#078477",
         },
       },
     },
