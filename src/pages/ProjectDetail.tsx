@@ -49,6 +49,11 @@ const projects = [
       "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
     fullDescription:
       "Clean, elegant design with strategic use of white space and calming colors to inspire trust and clarity. Clear calls-to-action, including client onboarding and newsletter signup. Hero section with compelling messaging and a strong personal brand image. Structured comparison of “where you are” vs. “where you want to be” to speak directly to user pain points. Responsive layout and optimized performance across devices.",
+    testimonial: {
+      message:
+        " Karen is not just technically skilled - she's an exceptional listener who truly cares about delivering quality work. Her collaboration with our designer was seamless, and her attention to detail ensured a flawless website. Professional, responsive, and genuinely invested in our success.",
+      client: "- Barbara Santos, Founder of Eleva",
+    },
     tags: ["Wix"],
     image: "/images/eleva-home.png",
     additionalImages: [
@@ -70,6 +75,11 @@ const projects = [
       "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body. The goal was to reflect the brand’s philosophy of inner calm, rejuvenation, and personalized care through a sophisticated and user-friendly digital experience.",
     fullDescription:
       "Clean, minimalist design with earthy tones and natural imagery to evoke tranquility. Mobile-optimized layout for on-the-go users. Highlight sections for mission, vision, and core values. Visual hierarchy built around photography to establish trust and showcase the spa environment. WhatsApp contact integration for quick communication. ",
+    testimonial: {
+      message:
+        " Working with Karen was an amazing experience! She is extremely professional, incredibly detail, oriented, and clearly knows her craft. I especially appreciated how smart and direct she is, no wasted time, just clear communication and efficient solutions. Anytime a problem came up, Karen handled it quickly and effectively. I highly recommend her to anyone looking for someone who not only understands design and function but also delivers real results! And loved my website, it was more than I was expecting!!!",
+      client: "- Leticia Martins, Founder of Letih Beauty",
+    },
     tags: ["JavaScript", "React", "Contentful", "Airtable"],
     image: "images/letih-home.webp",
     additionalImages: [
@@ -473,9 +483,20 @@ export default function ProjectDetail() {
             <h2 className="text-2xl font-bold mb-6 text-primary-400">
               About this project
             </h2>
-            <div className="text-background-light space-y-4">
+            <div className="backdrop-blur-sm bg-makara-50/30 p-6 rounded-xl space-y-4">
               <p>{project.fullDescription}</p>
             </div>
+            {/* if there is testimonials */}
+            {project.testimonial && (
+              <div className="mt-8 p-6 bg-makara-50/30 border-l-4 border-pink-500 rounded backdrop-blur-sm bg-makara-50/30 p-6 rounded-xl">
+                <p className="italic text-background-light">
+                  "{project.testimonial.message}"
+                </p>
+                <p className="mt-4 text-right text-background-light">
+                  {project.testimonial.client}
+                </p>
+              </div>
+            )}
           </motion.div>
 
           <motion.div
