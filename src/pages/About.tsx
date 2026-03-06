@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import BtnResume from "../components/BtnResume";
-import { useEffect } from "react";
-import { useScene } from "../experience/Scene";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -169,7 +167,7 @@ export default function About() {
                 <figure className="w-full max-w-md overflow-hidden rounded-2xl border border-gray-700/60 bg-black/20 shadow-lg">
                   <img
                     src="/images/karen-profile.webp"
-                    alt="Karen Banci profile photo"
+                    alt="Karen Banci profile"
                     className="h-full w-full object-cover"
                     loading="lazy"
                   />
