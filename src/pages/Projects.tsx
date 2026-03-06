@@ -13,14 +13,32 @@ const projects = [
   },
   {
     id: 2,
-    title: "EcoScan",
+    title: "Frontier Digital",
     description:
-      "EcoScan empowers sustainable shopping by providing instant environmental impact data. Our Python-based Chrome extension and mobile app (with barcode scanner and search) reveal a product's carbon footprint and water usage. Make informed choices and contribute to a greener future with transparent, real-time insights from our database.",
-    tags: ["Python", "Figma", "Software Development", "Web Development"],
-    image: "/images/ecoScan5.webp",
+      "Frontier Digital is a sleek and modern website created for a digital marketing agency specializing in innovative online strategies and creative solutions.",
+    tags: [
+      "Gatsby",
+      "GraphQL",
+      "Contentful",
+      "Netlify",
+      "SEO Optimization",
+      "Performance",
+      "Google Analytics",
+    ],
+    image: "/images/frontier-home.webp",
   },
+
   {
     id: 3,
+    title: "Serralheria ELLA",
+    description:
+      "Serralheria ELLA is a modern digital presence for a company specializing in high-end aluminum and glass solutions for residential and commercial projects.",
+    tags: ["Full-Stack", "Web Development", "React", "Tailwind CSS", "Node.js"],
+    image: "/images/ella-home.webp",
+  },
+
+  {
+    id: 4,
     title: "Eleva",
     description:
       "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
@@ -28,7 +46,16 @@ const projects = [
     image: "/images/eleva-home.png",
   },
   {
-    id: 4,
+    id: 5,
+    title: "EcoScan",
+    description:
+      "EcoScan empowers sustainable shopping by providing instant environmental impact data. Our Python-based Chrome extension and mobile app (with barcode scanner and search) reveal a product's carbon footprint and water usage. Make informed choices and contribute to a greener future with transparent, real-time insights from our database.",
+    tags: ["Python", "Figma", "Software Development", "Web Development"],
+    image: "/images/ecoScan5.webp",
+  },
+
+  {
+    id: 6,
     title: "Letih Beauty",
     description:
       "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body.",
@@ -37,7 +64,7 @@ const projects = [
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/letih-home.webp",
   },
   {
-    id: 5,
+    id: 7,
     title: "Jairo Honorio",
     description:
       "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google.",
@@ -46,7 +73,7 @@ const projects = [
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
   },
   {
-    id: 6,
+    id: 8,
     title: "Slap of life (Global Game Jam)",
     description:
       "This group project, inspired by the Global Game Jam at USV University of Silicon Valley, is centered on Make me laugh.",
@@ -55,7 +82,7 @@ const projects = [
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/slap-cover.webp",
   },
   {
-    id: 7,
+    id: 9,
     title: "Periodic Table 3D",
     description:
       "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
@@ -63,7 +90,7 @@ const projects = [
     image: "/images/periodic-table-project.mov",
   },
   {
-    id: 8,
+    id: 10,
     title: "Marble Race - Game React Three Fiber",
     description:
       "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
@@ -71,7 +98,7 @@ const projects = [
     image: "/images/marble-race.mov",
   },
   {
-    id: 9,
+    id: 11,
     title: "Mario Jump",
     description:
       "Mario Jump is an arcade-style endless runner game where the challenge is the player's endurance and reaction time.",

@@ -23,32 +23,71 @@ const projects = [
   },
   {
     id: 2,
-    title: "EcoScan - Hackathon Project - 4th place",
+    title: "Frontier Digital",
     description:
-      "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
-    fullDescription: `My core contribution to EcoScan centered on front-end development, creating the intuitive Chrome extension and mobile app UI for seamless eco-impact insights. I focused on delivering a user-friendly experience for barcode scanning, search, and real-time data display.
-      We're building EcoScan, a suite of tools designed to seamlessly integrate environmental impact data into your shopping experience. Whether you're Browse on Amazon or in the grocery store, EcoScan provides instant transparency.Our solution includes: Browser Extension: A Chrome extension that overlays product listings with critical carbon emission and environmental impact details. Mobile App: A powerful app featuring: Barcode Scanner: Instantly scan products to view their carbon and water footprints, and see how they compare to alternatives. Search Function: Manually search our real-time database for product environmental information.Favorites & History: Track preferred eco-friendly products and review your scanning history. Scoring Methodology: Understand how products are scored for their environmental impact. EcoScan empowers consumers to make informed, sustainable decisions. By providing accessible data on a product's lifecycle – from farm to transport – we help individuals contribute to global zero-carbon pledges and broader sustainability goals. Our real-time database, hosted on Airtable, pulls data from government resources and product sheets, allowing us to continuously update and refine information. This robust backend ensures that you always have access to accurate, up-to-date environmental insights. Team: Karen Banci, Jairo Honorio, Sarah Young and Phil Roth.`,
-    tags: ["Python", "Figma", "Software Development", "Web Development"],
-    image: "/images/ecoScan5.webp",
-    additionalImages: [
-      "images/ecoScan4.webp",
-      "images/ecoScan3.webp",
-      "images/ecoScan2.webp",
-      "images/ecoScan1.webp",
+      "A high-performance, ultra-fast website for a creative technology agency specializing in entertainment, enterprise, and immersive storytelling.",
+    fullDescription:
+      "Engineered a blazing-fast, SEO-optimized static site using the Jamstack architecture. Built the frontend with Gatsby and utilized GraphQL to seamlessly query and deliver dynamic case studies and media from a Contentful headless CMS. Deployed and hosted on Netlify for continuous integration and rapid global content delivery. The sleek, modern UI reflects the agency's high-end brand identity, featuring smooth transitions and optimized media handling for their extensive creative portfolio.",
+    testimonial: {
+      message:
+        "The transition to a modern headless architecture completely transformed our digital presence. The site is incredibly fast, and managing our portfolio through Contentful is a breeze. The technical execution was flawless and perfectly aligned with our creative vision.",
+      client: "- Team Frontier Digital", // Fique à vontade para ajustar se tiver o nome de um contato específico
+    },
+    tags: [
+      "Gatsby",
+      "GraphQL",
+      "Contentful",
+      "Netlify",
+      "SEO Optimization",
+      "Performance",
+      "Google Analytics",
     ],
-    client: "Self Project",
-    duration: "24 hours",
-    role: "Frontend Developer",
-    year: "2023",
-    link: "https://www.youtube.com/watch?v=RBm_2s8Qh4s&ab_channel=KarenHonorioBanci",
+    image: "/images/frontier-home.mov",
+    additionalImages: [
+      "/images/frontier-partner.mov",
+      "/images/frontier-partner.webp",
+      "/images/frontier-works.webp",
+    ],
+    client: "Frontier Digital",
+    duration: "4 months", // Ajuste para o tempo real que você levou
+    role: "Junior Full-Stack Developer",
+    year: "2026",
+    link: "https://frontierdigital.io/",
   },
+
   {
     id: 3,
+    title: "Serralheria ELLA",
+    description:
+      "A modern digital presence for a company specializing in high-end aluminum and glass solutions for residential and commercial projects.",
+    fullDescription:
+      "Developed a comprehensive full-stack platform featuring a responsive portfolio with dynamic filtering for architectural categories like glass facades, shower enclosures, and handrails. The layout prioritizes clear navigation and showcases project quality through a clean, elegant design. Includes a structured 'About Us' section detailing industry partnerships, and a strategic contact area with WhatsApp integration to facilitate client quotes and enhance user engagement.",
+    testimonial: {
+      message:
+        "Karen understood exactly what we needed to showcase our premium aluminum and glass work. The portfolio section is incredibly easy for our clients to navigate, and the whole site looks very professional.",
+      client: "- Equipe Serralheria ELLA",
+    },
+    tags: ["Full-Stack", "Web Development", "React", "Tailwind CSS", "Node.js"],
+    image: "/images/ella-video-home.mov",
+    additionalImages: [
+      "/images/ella-video-dashboard.mov",
+      "/images/ella-painel.webp",
+      "/images/ella-dashboard.webp",
+      "/images/ella-add-project.webp",
+    ],
+    client: "Serralheria ELLA",
+    duration: "2 months",
+    role: "Full-Stack Developer",
+    year: "2026",
+    link: "https://serralheriaella.com.br/#/",
+  },
+  {
+    id: 4,
     title: "Eleva – Life Strategy & Coaching Website",
     description:
       "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
     fullDescription:
-      "Clean, elegant design with strategic use of white space and calming colors to inspire trust and clarity. Clear calls-to-action, including client onboarding and newsletter signup. Hero section with compelling messaging and a strong personal brand image. Structured comparison of “where you are” vs. “where you want to be” to speak directly to user pain points. Responsive layout and optimized performance across devices.",
+      "Clean, elegant design with strategic use of white space and calming colors to inspire trust and clarity. Clear calls-to-action, including client onboarding and newsletter signup. Hero section with compelling messaging and a strong personal brand image. Structured comparison of where you are vs. where you want to be to speak directly to user pain points. Responsive layout and optimized performance across devices.",
     testimonial: {
       message:
         " Karen is not just technically skilled - she's an exceptional listener who truly cares about delivering quality work. Her collaboration with our designer was seamless, and her attention to detail ensured a flawless website. Professional, responsive, and genuinely invested in our success.",
@@ -69,10 +108,31 @@ const projects = [
     link: "http://www.eleva.live",
   },
   {
-    id: 4,
+    id: 5,
+    title: "EcoScan - Hackathon Project - 4th place",
+    description:
+      "Eleva is a modern website for a life coach empowering women through The ELEVA Method™ to align life and financial goals.",
+    fullDescription: `My core contribution to EcoScan centered on front-end development, creating the intuitive Chrome extension and mobile app UI for seamless eco-impact insights. I focused on delivering a user-friendly experience for barcode scanning, search, and real-time data display.
+      We're building EcoScan, a suite of tools designed to seamlessly integrate environmental impact data into your shopping experience. Whether you're Browse on Amazon or in the grocery store, EcoScan provides instant transparency.Our solution includes: Browser Extension: A Chrome extension that overlays product listings with critical carbon emission and environmental impact details. Mobile App: A powerful app featuring: Barcode Scanner: Instantly scan products to view their carbon and water footprints, and see how they compare to alternatives. Search Function: Manually search our real-time database for product environmental information.Favorites & History: Track preferred eco-friendly products and review your scanning history. Scoring Methodology: Understand how products are scored for their environmental impact. EcoScan empowers consumers to make informed, sustainable decisions. By providing accessible data on a product's lifecycle – from farm to transport – we help individuals contribute to global zero-carbon pledges and broader sustainability goals. Our real-time database, hosted on Airtable, pulls data from government resources and product sheets, allowing us to continuously update and refine information. This robust backend ensures that you always have access to accurate, up-to-date environmental insights. Team: Karen Banci, Jairo Honorio, Sarah Young and Phil Roth.`,
+    tags: ["Python", "Figma", "Software Development", "Web Development"],
+    image: "/images/ecoScan5.webp",
+    additionalImages: [
+      "images/ecoScan4.webp",
+      "images/ecoScan3.webp",
+      "images/ecoScan2.webp",
+      "images/ecoScan1.webp",
+    ],
+    client: "Self Project",
+    duration: "24 hours",
+    role: "Frontend Developer",
+    year: "2023",
+    link: "https://www.youtube.com/watch?v=RBm_2s8Qh4s&ab_channel=KarenHonorioBanci",
+  },
+  {
+    id: 6,
     title: "LETIH BEAUTY – Aesthetic Wellness Brand Website",
     description:
-      "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body. The goal was to reflect the brand’s philosophy of inner calm, rejuvenation, and personalized care through a sophisticated and user-friendly digital experience.",
+      "LETIH BEAUTY is a serene and elegant website created for a boutique beauty and wellness brand offering holistic treatments for face and body. The goal was to reflect the brand's philosophy of inner calm, rejuvenation, and personalized care through a sophisticated and user-friendly digital experience.",
     fullDescription:
       "Clean, minimalist design with earthy tones and natural imagery to evoke tranquility. Mobile-optimized layout for on-the-go users. Highlight sections for mission, vision, and core values. Visual hierarchy built around photography to establish trust and showcase the spa environment. WhatsApp contact integration for quick communication. ",
     testimonial: {
@@ -98,12 +158,12 @@ const projects = [
     link: "https://letihbeauty.com/",
   },
   {
-    id: 5,
+    id: 7,
     title: "Jairo Honorio – Personal Portfolio",
     description:
       "This personal portfolio was created for Jairo Honorio, a Senior Software Engineer at Google. The goal was to showcase his professional journey, leadership roles, and technical expertise in a clean, engaging, and easy-to-navigate format.",
     fullDescription:
-      "Hero Section: A vibrant, welcoming photo paired with a clear title and CTA. About Me: A brief yet impactful introduction that highlights Jairo’s entrepreneurial and software engineering background. Interactive Timeline: Visually structured career path including roles, volunteer work, and achievements. Contact Section: Encourages direct communication with an inviting message and essential contact links. To create a personal brand website that effectively communicates the impact and experience of a senior tech professional, helping him connect with collaborators, recruiters, and peers.",
+      "Hero Section: A vibrant, welcoming photo paired with a clear title and CTA. About Me: A brief yet impactful introduction that highlights Jairo's entrepreneurial and software engineering background. Interactive Timeline: Visually structured career path including roles, volunteer work, and achievements. Contact Section: Encourages direct communication with an inviting message and essential contact links. To create a personal brand website that effectively communicates the impact and experience of a senior tech professional, helping him connect with collaborators, recruiters, and peers.",
     tags: ["Jekill", "React", "JavaScript", "AMP"],
     image:
       "https://raw.githubusercontent.com/karenbanci/portfolio-images/refs/heads/main/jairo-home.webp",
@@ -120,7 +180,7 @@ const projects = [
     link: "https://jairo.jahdsoft.com/",
   },
   {
-    id: 6,
+    id: 8,
     title: "Slap of life (Global Game Jam)",
     description:
       "You live your life like any other. Wake up, eat some breakfast, go to work, save the day from government conspiracies. But there is just one thing, you MUST SLAP EVERYTHING!",
@@ -143,7 +203,7 @@ const projects = [
     link: "https://globalgamejam.org/games/2024/slap-life-6",
   },
   {
-    id: 7,
+    id: 9,
     title: "Immersive Periodic Table 3D",
     description:
       "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
@@ -161,7 +221,7 @@ const projects = [
     link: "https://karenbanci.github.io/periodic_table_development/",
   },
   {
-    id: 8,
+    id: 10,
     title: "Marble Race - Game React Three FIber",
     description:
       "Bruno Simon's course project, a marble race game built with React Three Fiber.",
@@ -179,7 +239,7 @@ const projects = [
     link: "https://karenbanci.github.io/game-react-three-fiber/",
   },
   {
-    id: 9,
+    id: 11,
     title: "Mario Jump",
     description:
       "Mario Jump is an arcade-style endless runner game where the challenge is the player's endurance and reaction time. The goal is not to finish a level, but to survive as long as possible to achieve a high score.",
@@ -337,7 +397,7 @@ export default function ProjectDetail() {
                     <button
                       onClick={() =>
                         setCurrentImageIndex((prev) =>
-                          prev === 0 ? allImages.length - 1 : prev - 1
+                          prev === 0 ? allImages.length - 1 : prev - 1,
                         )
                       }
                       className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center hover:bg-black/70 transition-colors"
@@ -361,7 +421,7 @@ export default function ProjectDetail() {
                     <button
                       onClick={() =>
                         setCurrentImageIndex((prev) =>
-                          prev === allImages.length - 1 ? 0 : prev + 1
+                          prev === allImages.length - 1 ? 0 : prev + 1,
                         )
                       }
                       className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center hover:bg-black/70 transition-colors"
