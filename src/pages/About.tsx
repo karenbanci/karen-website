@@ -36,21 +36,22 @@ const experiences = [
   {
     id: 1,
     role: "Full Stack Developer - Freelancer",
-    company: "VIVE Church",
-    period: "Jan 2025 - Present",
-    description:
-      "Develop visually accurate and responsive pages from designs, manage and update CRM data efficiently, and identify and resolve bugs to enhance performance and user experience.",
-    link: "https://www.vivechurch.org/",
-  },
-  {
-    id: 2,
-    role: "Full Stack Developer - Freelancer",
     company: "Frontier Digital",
-    period: "Oct 2022 - Mar 2025",
+    period: "Oct 2022 - Present",
     description:
       "Developed a Three.js 3D viewer for interactive model visualization, conducted audits to improve performance, security, and functionality, optimized the codebase for efficiency and scalability with client approval, and maintained JavaScript code while managing Netlify projects to ensure seamless operation.",
     link: "https://frontierdigital.io/",
   },
+  {
+    id: 2,
+    role: "Full Stack Developer - Freelancer",
+    company: "VIVE Church",
+    period: "Jan 2025 - Dez 2025",
+    description:
+      "Develop visually accurate and responsive pages from designs, manage and update CRM data efficiently, and identify and resolve bugs to enhance performance and user experience.",
+    link: "https://www.vivechurch.org/",
+  },
+
   {
     id: 3,
     role: "Frontend Developer - Volunteer",
@@ -161,6 +162,19 @@ export default function About() {
               animate="visible"
               variants={staggerContainer}
             >
+              <motion.div
+                variants={fadeIn}
+                className="flex justify-center lg:justify-center mb-8"
+              >
+                <figure className="w-full max-w-md overflow-hidden rounded-2xl border border-gray-700/60 bg-black/20 shadow-lg">
+                  <img
+                    src="/images/karen-profile.webp"
+                    alt="Karen Banci profile photo"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </figure>
+              </motion.div>
               <motion.h2
                 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-800 text-primary-500"
                 variants={fadeIn}
@@ -169,12 +183,13 @@ export default function About() {
               </motion.h2>
 
               <motion.div variants={fadeIn} className="space-y-4 text-gray-300">
+                <p>Hello!</p>
                 <p>
-                  Hello! I'm Karen Caroline Honorio Banci, a Full Stack
-                  Developer with a background in Chemistry and a passion for
-                  technology. My journey began in science, but in 2021, I
-                  transitioned into software development, where I found my true
-                  calling in coding and problem-solving.
+                  I'm Karen Banci, a Full Stack Developer with a background in
+                  Chemistry and a passion for technology. My journey began in
+                  science, but in 2021, I transitioned into software
+                  development, where I found my true calling in coding and
+                  problem-solving.
                 </p>
                 <p>
                   Since moving to Silicon Valley, I've been expanding my
