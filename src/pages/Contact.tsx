@@ -7,7 +7,8 @@ Airtable.configure({
   apiKey: process.env.REACT_APP_AIRTABLE_API_KEY, // Chave de API do Airtable
 });
 
-const base = Airtable.base(process.env.REACT_APP_AIRTABLE_BASE_ID || "");
+// Remove this line if the form is deleted
+// const base = Airtable.base(process.env.REACT_APP_AIRTABLE_BASE_ID || "");
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -62,7 +63,7 @@ export default function Contact() {
   // }, [addShape, clearShapes]);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormState({
       ...formState,
@@ -76,37 +77,37 @@ export default function Contact() {
 
     setFormState({ ...formState, submitting: true });
 
-    base("Contact").create(
-      [
-        {
-          fields: {
-            Name: formState.name,
-            Email: formState.email,
-            Message: formState.message,
-          },
-        },
-      ],
-      function (err, records) {
-        if (err) {
-          console.error(err);
-          setFormState({
-            ...formState,
-            submitting: false,
-            error: "Submission failed.",
-          });
-          return;
-        }
+    // base("Contact").create(
+    //   [
+    //     {
+    //       fields: {
+    //         Name: formState.name,
+    //         Email: formState.email,
+    //         Message: formState.message,
+    //       },
+    //     },
+    //   ],
+    //   function (err, records) {
+    //     if (err) {
+    //       console.error(err);
+    //       setFormState({
+    //         ...formState,
+    //         submitting: false,
+    //         error: "Submission failed.",
+    //       });
+    //       return;
+    //     }
 
-        setFormState({
-          name: "",
-          email: "",
-          message: "",
-          submitted: true,
-          submitting: false,
-          error: "",
-        });
-      }
-    );
+    //     setFormState({
+    //       name: "",
+    //       email: "",
+    //       message: "",
+    //       submitted: true,
+    //       submitting: false,
+    //       error: "",
+    //     });
+    //   },
+    // );
   };
 
   return (
@@ -134,133 +135,15 @@ export default function Contact() {
           </motion.p>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex justify-center items-center">
           <motion.div
-            className="lg:w-1/2"
+            className="lg:w-1/2 backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl flex flex-col items-center gap-8"
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div
-              className="backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl"
-              variants={fadeIn}
-            >
-              {!formState.submitted ? (
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-6">
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium mb-2 text-primary-500"
-                    >
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formState.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                      placeholder="Name"
-                    />
-                  </div>
-
-                  <div className="mb-6">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium mb-2 text-primary-500"
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formState.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                      placeholder="example@example.com"
-                    />
-                  </div>
-
-                  <div className="mb-6">
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium mb-2 text-primary-500"
-                    >
-                      Your Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formState.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                      placeholder="Tell me about your project..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={formState.submitting}
-                    className="w-full px-6 py-3 rounded-lg  bg-primary-500 text-white font-medium
-                    hover:shadow-lg hover:shadow-primary-100/30 transition-all duration-300 disabled:opacity-70"
-                  >
-                    {formState.submitting ? "Sending..." : "Send Message"}
-                  </button>
-                </form>
-              ) : (
-                <div className="text-center py-8">
-                  <svg
-                    className="w-16 h-16 text-green-500 mx-auto mb-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-                  <p className="text-gray-300">
-                    Thanks for reaching out. I'll get back to you as soon as
-                    possible.
-                  </p>
-                  <button
-                    onClick={() =>
-                      setFormState({
-                        name: "",
-                        email: "",
-                        message: "",
-                        submitted: false,
-                        submitting: false,
-                        error: "",
-                      })
-                    }
-                    className="mt-6 px-6 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
-                  >
-                    Send Another Message
-                  </button>
-                </div>
-              )}
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="lg:w-1/2"
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeIn} className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 text-primary-500">
+            <motion.div variants={fadeIn} className="mb-8 ">
+              <h2 className="text-2xl font-bold mb-4 text-primary-500 ">
                 Contact Information
               </h2>
               <p className="text-gray-300 mb-6">
@@ -286,7 +169,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p className="font-medium">karenbanci1@gmail.com</p>
+                    <a
+                      href="mailto:karenbanci1@gmail.com"
+                      className="font-medium hover:underline"
+                    >
+                      karenbanci1@gmail.com
+                    </a>
                   </div>
                 </div>
 
@@ -333,7 +221,7 @@ export default function Contact() {
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <h2 className="text-2xl font-bold mb-4 text-primary-500">
+              <h2 className="text-2xl font-bold mb-4 text-primary-500 text-center">
                 Social Media
               </h2>
               <div className="flex space-x-4">
@@ -341,7 +229,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/karenchb/"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-500 transition-colors"
+                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-social-linkedin transition-colors"
                 >
                   <svg
                     className="w-7 h-7"
@@ -353,7 +241,9 @@ export default function Contact() {
                 </a>
                 <a
                   href="https://x.com/bkakis1?s=21&t=cKnffPWbH75RQXdGkWpQPg"
-                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-500 transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-social-twitter transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -368,7 +258,9 @@ export default function Contact() {
                 </a>
                 <a
                   href="https://www.instagram.com/kakabanci/"
-                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500 transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:[background-image:theme(colors.social.instagram)] transition-colors"
                 >
                   <svg
                     className="w-7 h-7"
@@ -380,7 +272,9 @@ export default function Contact() {
                 </a>
                 <a
                   href="https://github.com/karenbanci"
-                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-black transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-social-github transition-colors"
                 >
                   <svg
                     className="w-7 h-7"

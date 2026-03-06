@@ -27,6 +27,18 @@ module.exports = {
           300: "#1D9C8F",
           400: "#078477",
         },
+        social: {
+          linkedin: "#0B65C2",
+          twitter: "#272C30",
+          github: "#181717",
+          // manter se quiser, mas NÃO usar como bg-color no hover:
+          instagram:
+            "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)",
+        },
+      },
+      backgroundImage: {
+        "social-instagram-gradient":
+          "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)",
       },
     },
   },
