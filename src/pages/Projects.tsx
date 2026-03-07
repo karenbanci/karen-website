@@ -87,7 +87,7 @@ const projects = [
     description:
       "An interactive 3D periodic table built with React and Three.js, showcasing elements in a visually appealing way.",
     tags: ["Three.js", "WebGL", "React", "Blender"],
-    image: "/images/periodic-table-project.mov",
+    image: "/images/periodic-table-project.mp4",
   },
   {
     id: 10,
@@ -95,7 +95,7 @@ const projects = [
     description:
       "A complete UX/UI overhaul of an e-commerce platform with 3D product visualization.",
     tags: ["React", "React Three Fiber", "Three.js", "Vite"],
-    image: "/images/marble-race.mov",
+    image: "/images/marble-race.mp4",
   },
   {
     id: 11,
@@ -103,7 +103,7 @@ const projects = [
     description:
       "Mario Jump is an arcade-style endless runner game where the challenge is the player's endurance and reaction time.",
     tags: ["JavaScript", "CSS", "HTML", "Game"],
-    image: "/images/mario-jump.mov",
+    image: "/images/mario-jump.mp4",
   },
 ];
 
