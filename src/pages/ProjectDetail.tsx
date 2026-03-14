@@ -30,8 +30,8 @@ const projects = [
       "Engineered a blazing-fast, SEO-optimized static site using the Jamstack architecture. Built the frontend with Gatsby and utilized GraphQL to seamlessly query and deliver dynamic case studies and media from a Contentful headless CMS. Deployed and hosted on Netlify for continuous integration and rapid global content delivery. The sleek, modern UI reflects the agency's high-end brand identity, featuring smooth transitions and optimized media handling for their extensive creative portfolio.",
     testimonial: {
       message:
-        "The transition to a modern headless architecture completely transformed our digital presence. The site is incredibly fast, and managing our portfolio through Contentful is a breeze. The technical execution was flawless and perfectly aligned with our creative vision.",
-      client: "- Team Frontier Digital", // Fique à vontade para ajustar se tiver o nome de um contato específico
+        "Karen has been a trusted web developer and partner for years. She is consistently diligent, responsive, and incredibly reliable. Knowing she is managing our website gives me real peace of mind. Karen is always willing to take on new challenges and finds thoughtful, innovative ways to implement new features or adapt to platform and hosting constraints. Her transparency and clear documentation make it easy to stay informed and keep projects moving forward.",
+      client: "Marcos Bueno, Founder of Frontier Digital", // Fique à vontade para ajustar se tiver o nome de um contato específico
     },
     tags: [
       "Gatsby",
